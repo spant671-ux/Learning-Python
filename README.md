@@ -31,8 +31,9 @@ Welcome to the **Learning-Python** repository! This project serves as a comprehe
 ```text
 📦 Learning-Python
  ┣ 📂 01_basics               # Fundamentals & Execution Model
- ┃ ┣ 📜 hello.py              # Print methods & standard output
- ┃ ┗ 📜 variables.py          # Variables, data types, f-strings & conditionals
+ ┃ ┣ 📜 01_hello.py           # Print methods & standard output
+ ┃ ┣ 📜 02_variables.py       # Variables, data types, f-strings & conditionals
+ ┃ ┗ 📜 03_typecasting.py     # Explicit type conversion & truthy/falsy evaluation
  ┣ 📂 02_data_types           # (Upcoming) Numbers, Strings, Lists, Dictionaries
  ┣ 📂 03_conditionals        # (Upcoming) Flow control & Pattern Matching
  ┣ 📂 04_loops               # (Upcoming) Iterations & Comprehensions
@@ -67,10 +68,13 @@ cd Learning-Python
 
 ```bash
 # Run print basics
-python 01_basics/hello.py
+python 01_basics/01_hello.py
 
-# Run variables, data types, f-strings & conditionals
-python 01_basics/variables.py
+# Run variables, data types & conditionals
+python 01_basics/02_variables.py
+
+# Run typecasting & boolean conversions
+python 01_basics/03_typecasting.py
 ```
 
 ---
