@@ -36,7 +36,8 @@ Welcome to the **Learning-Python** repository! This project serves as a comprehe
  ┃ ┣ 📜 03_typecasting.py     # Explicit type conversion & truthy/falsy evaluation
  ┃ ┣ 📜 04_input.py           # Console user input (stdin) & numeric parsing
  ┃ ┣ 📜 exercise_01.py        # Practice: Rectangle area calculator
- ┃ ┗ 📜 exercise_02.py        # Practice: Shopping cart receipt calculator
+ ┃ ┣ 📜 exercise_02.py        # Practice: Shopping cart receipt calculator
+ ┃ ┗ 📜 madlibs.py            # Mini-Game: Interactive Mad Libs story generator
  ┣ 📂 02_data_types           # (Upcoming) Numbers, Strings, Lists, Dictionaries
  ┣ 📂 03_conditionals        # (Upcoming) Flow control & Pattern Matching
  ┣ 📂 04_loops               # (Upcoming) Iterations & Comprehensions
