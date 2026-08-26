@@ -31,8 +31,8 @@ Welcome to the **Learning-Python** repository! This project serves as a comprehe
 ```text
 📦 Learning-Python
  ┣ 📂 01_basics               # Fundamentals & Execution Model
- ┃ ┣ 📜 hello.py              # Print methods & first function definitions
- ┃ ┗ 📜 import.py             # Module system, __pycache__, and import mechanics
+ ┃ ┣ 📜 hello.py              # Print methods & standard output
+ ┃ ┗ 📜 variables.py          # Variables, data types, f-strings & conditionals
  ┣ 📂 02_data_types           # (Upcoming) Numbers, Strings, Lists, Dictionaries
  ┣ 📂 03_conditionals        # (Upcoming) Flow control & Pattern Matching
  ┣ 📂 04_loops               # (Upcoming) Iterations & Comprehensions
@@ -66,11 +66,11 @@ cd Learning-Python
 ### 3. Run Samples
 
 ```bash
-# Test execution of basics
+# Run print basics
 python 01_basics/hello.py
 
-# Test module imports
-python 01_basics/import.py
+# Run variables, data types, f-strings & conditionals
+python 01_basics/variables.py
 ```
 
 ---
@@ -79,36 +79,44 @@ python 01_basics/import.py
 
 | Module | Status | Core Concepts Covered | Folder |
 | :--- | :---: | :--- | :---: |
-| **01. Basics** | 🟢 `Completed` | Syntax, Print, Functions, Mutable/Immutable overview, Imports | [`01_basics/`](./01_basics) |
-| **02. Data Types & Memory** | 🟡 `In Progress` | Numbers, Strings, Lists, Tuples, Dicts, Memory References | `02_data_types/` |
-| **03. Conditionals & Logic** | ⚪ `Planned` | If-Elif-Else, Ternary Operators, Structural Pattern Matching | `03_conditionals/` |
-| **04. Loops & Iteration** | ⚪ `Planned` | `for`, `while`, Loop else, List/Dict/Set Comprehensions | `04_loops/` |
-| **05. Functions & Scopes** | ⚪ `Planned` | `*args`, `**kwargs`, Lambda, Closures, LEGB Rule | `05_functions/` |
-| **06. Object-Oriented Programming** | ⚪ `Planned` | Classes, Objects, Inheritance, Dunder Methods, Encapsulation | `06_oop/` |
-| **07. Functional & Decorators** | ⚪ `Planned` | First-class functions, Custom Decorators, Generators | `07_decorators/` |
-| **08. Error & File Handling** | ⚪ `Planned` | `try-except-finally`, Context Managers (`with`), Custom Errors | `08_error_handling/` |
-| **09. Practical Mini-Projects** | ⚪ `Planned` | CLI Tools, Automation Scripts, API Integrations | `09_projects/` |
+| **01. Basics** | 🟢 `Completed` | Syntax, `print()`, Variables, Data Types (`str`, `int`, `float`, `bool`), `f-strings`, `if-else` | [`01_basics/`](./01_basics) |
+| **02. Data Types & Collections** | 🟡 `In Progress` | Strings in-depth, Lists, Tuples, Sets, Dictionaries, Mutability | `02_data_types/` |
+| **03. Conditionals & Logic** | ⚪ `Planned` | If-Elif-Else, Logical Operators (`and`, `or`, `not`), Match-Case | `03_conditionals/` |
+| **04. Loops & Iteration** | ⚪ `Planned` | `for`, `while`, `break`, `continue`, List Comprehensions | `04_loops/` |
+| **05. Functions & Scopes** | ⚪ `Planned` | `def`, Return values, Default args, `*args`, `**kwargs`, LEGB Scope | `05_functions/` |
+| **06. Object-Oriented Programming** | ⚪ `Planned` | Classes, Objects, `__init__`, Inheritance, Encapsulation | `06_oop/` |
+| **07. Functional & Decorators** | ⚪ `Planned` | Lambdas, `map`/`filter`, Decorators, Generators (`yield`) | `07_decorators/` |
+| **08. Error & File Handling** | ⚪ `Planned` | `try-except-finally`, `with` statement, File I/O | `08_error_handling/` |
+| **09. Practical Mini-Projects** | ⚪ `Planned` | CLI Tools, Automation Scripts, Mini-Apps | `09_projects/` |
 
 ---
 
-## 💡 Key Takeaways & Notes
+## 💡 Key Takeaways & Quick Reference
+
+<details open>
+<summary><b>Quick Reference: Variables & Data Types (01_basics)</b></summary>
+<br>
+
+| Concept | Description | Example Syntax |
+| :--- | :--- | :--- |
+| **`print()`** | Outputs text or values to console | `print("Hello World")` |
+| **Variable** | Named container in memory (dynamically typed) | `age = 25` |
+| **`str` (String)** | Text enclosed in `'...'` or `"..."` | `name = "santosh"` |
+| **`int` (Integer)** | Whole numbers (+, -, 0) with no decimal | `quantity = 3` |
+| **`float` (Float)** | Numbers containing a decimal point | `price = 10.99` |
+| **`bool` (Boolean)** | Binary truth values (`True` or `False`) | `is_student = False` |
+| **`f-string`** | Formatted string for variable interpolation | `f"Hello {name}, age: {age}"` |
+| **`if-else`** | Conditional branching (uses 4-space indent) | `if is_online: print("Online")` |
+
+</details>
 
 <details>
 <summary><b>🔍 Behind the Scenes: Python Execution & <code>__pycache__</code></b></summary>
 <br>
 
-- Python compiles source code (`.py`) into bytecode (`.pyc`) stored inside the `__pycache__` folder for imported modules to speed up subsequent loads.
-- Python's Virtual Machine (PVM) executes this bytecode line-by-line.
-- Top-level scripts run directly, but imported modules benefit from bytecode caching.
-
-</details>
-
-<details>
-<summary><b>📦 Python Import System</b></summary>
-<br>
-
-- Using `from module import function` brings specific attributes into the current namespace.
-- Any top-level code inside the imported module executes once upon initial import.
+- Python compiles source code (`.py`) into bytecode (`.pyc`) stored inside `__pycache__` for imported modules to accelerate startup.
+- Python's Virtual Machine (PVM) interprets and executes this bytecode.
+- Top-level scripts execute directly, while imported modules leverage bytecode caching.
 
 </details>
 
