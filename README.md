@@ -33,7 +33,10 @@ Welcome to the **Learning-Python** repository! This project serves as a comprehe
  ┣ 📂 01_basics               # Fundamentals & Execution Model
  ┃ ┣ 📜 01_hello.py           # Print methods & standard output
  ┃ ┣ 📜 02_variables.py       # Variables, data types, f-strings & conditionals
- ┃ ┗ 📜 03_typecasting.py     # Explicit type conversion & truthy/falsy evaluation
+ ┃ ┣ 📜 03_typecasting.py     # Explicit type conversion & truthy/falsy evaluation
+ ┃ ┣ 📜 04_input.py           # Console user input (stdin) & numeric parsing
+ ┃ ┣ 📜 exercise_01.py        # Practice: Rectangle area calculator
+ ┃ ┗ 📜 exercise_02.py        # Practice: Shopping cart receipt calculator
  ┣ 📂 02_data_types           # (Upcoming) Numbers, Strings, Lists, Dictionaries
  ┣ 📂 03_conditionals        # (Upcoming) Flow control & Pattern Matching
  ┣ 📂 04_loops               # (Upcoming) Iterations & Comprehensions
@@ -75,6 +78,9 @@ python 01_basics/02_variables.py
 
 # Run typecasting & boolean conversions
 python 01_basics/03_typecasting.py
+
+# Run user input & birthday incrementer
+python 01_basics/04_input.py
 ```
 
 ---
