@@ -4,7 +4,6 @@
 
 [![Python Version](https://img.shields.io/badge/python-3.10%2B-blue.svg?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![Status](https://img.shields.io/badge/status-active%20learning-success.svg?style=for-the-badge&color=2ea44f)](https://github.com/)
-[![License](https://img.shields.io/badge/license-MIT-informational.svg?style=for-the-badge)](LICENSE)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=for-the-badge)](https://github.com/)
 
 <p align="center">
