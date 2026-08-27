@@ -38,7 +38,13 @@ Welcome to the **Learning-Python** repository! This project serves as a comprehe
  ┃ ┣ 📜 exercise_01.py        # Practice: Rectangle area calculator
  ┃ ┣ 📜 exercise_02.py        # Practice: Shopping cart receipt calculator
  ┃ ┗ 📜 madlibs.py            # Mini-Game: Interactive Mad Libs story generator
- ┣ 📂 02_data_types           # (Upcoming) Numbers, Strings, Lists, Dictionaries
+ ┣ 📂 02_basics               # Math, Operators & Built-ins
+ ┃ ┣ 📜 01_arithmetic.py      # Arithmetic & augmented assignment operators
+ ┃ ┣ 📜 02_built_in_math_functions.py  # Built-in math: round, abs, pow, max, min
+ ┃ ┣ 📜 03_math_module.py     # math standard library (pi, e, sqrt, ceil, floor)
+ ┃ ┣ 📜 exercise_01.py        # Practice: Circle circumference calculator
+ ┃ ┣ 📜 exercise_02.py        # Practice: Circle area calculator
+ ┃ ┗ 📜 exercise_03.py        # Practice: Hypotenuse calculator (Pythagorean theorem)
  ┣ 📂 03_conditionals        # (Upcoming) Flow control & Pattern Matching
  ┣ 📂 04_loops               # (Upcoming) Iterations & Comprehensions
  ┣ 📂 05_functions           # (Upcoming) Closures, Scopes, *args & **kwargs
