@@ -45,7 +45,11 @@ Welcome to the **Learning-Python** repository! This project serves as a comprehe
  ┃ ┣ 📜 exercise_01.py        # Practice: Circle circumference calculator
  ┃ ┣ 📜 exercise_02.py        # Practice: Circle area calculator
  ┃ ┗ 📜 exercise_03.py        # Practice: Hypotenuse calculator (Pythagorean theorem)
- ┣ 📂 03_conditionals        # (Upcoming) Flow control & Pattern Matching
+ ┣ 📂 03_basics               # Conditionals & Flow Control
+ ┃ ┣ 📜 01_if_else.py         # if, elif, else branching & equality checks
+ ┃ ┣ 📜 exercise_01.py        # Practice: Command-line arithmetic calculator
+ ┃ ┣ 📜 exercise_02.py        # Practice: Weight converter (Kgs <-> Lbs)
+ ┃ ┗ 📜 exercise_03.py        # Practice: Temperature converter (Celsius <-> Fahrenheit)
  ┣ 📂 04_loops               # (Upcoming) Iterations & Comprehensions
  ┣ 📂 05_functions           # (Upcoming) Closures, Scopes, *args & **kwargs
  ┣ 📂 06_oop                 # (Upcoming) Object-Oriented Architecture
