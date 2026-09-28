@@ -73,3 +73,41 @@ data mining functionalities
 applications of dta mining
 statical desc of data
 data vis
+
+# ml
+define a well cosed learning problem.
+what is concept learning?
+name the algo used to find a maximum specific hypothesis.
+what is version space?
+define inductive bias.
+name 1 issue in ml.
+list 4 steps involved in designing a learning system
+state 2 issues faced in ml
+explain concept learning as a search problem in brief.
+write steps of the Find -S algo.
+what are the 2 boundary steps in v space.
+state 2 limits of the find -s algo.
+how does the candidate elimination algo handles negative example.
+why is inductive bias necessary for learning algo.
+diff btw linear and logistic regression
+why we call logistic regression regression even it solves classification probs.
+define a decision tree.
+what is info game?
+name the algo used to build a basic dt.
+instance based learning
+what is model based learning
+what does k represent in knn algo?
+define clustering.
+explain 2 probs appropriate for decision tree learning.
+diff btw k nearest neighbor and distance weighted nearest neighbor.
+explain the working of linear regression and make sure to explain in both ways - ols and gradient descent in mathematical way
+explain working of knn for both classification and regression prob.
+what is the use of k fold cross validation?
+why we use k fold over a single step training?
+what is the purpose of splitting a dataset.
+overfitting and underfitting.
+explain diff btw supervised and unsupervised learning.
+what is feature scaling? why it is required?
+what is data leakage? why should it be avoided?
+explain the complete ml workflow.
+
