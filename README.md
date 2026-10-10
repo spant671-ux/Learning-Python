@@ -1,63 +1,90 @@
-# 🐍 Learning Python
+# 🐍 Learning-Python
 
-A structured repository documenting my journey learning Python programming from the fundamentals to advanced concepts, with clean, concise, and educational code examples.
-
----
-
-## 📂 Repository Structure
-
-### 📁 `01basics` — Core Foundations
-*   **`01comms-and-var.py`**:
-    *   **Comments**: Single-line (`#`), multi-line string convention (`"""..."""`), and docstring overview.
-    *   **Variables**: Dynamic typing, heap-allocated object references, and variable assignment.
-    *   **Naming Rules & PEP 8**: Valid identifier rules, syntax error examples for invalid names (leading digits, spaces, special characters), case-sensitivity, and reserved keywords.
-*   **`02datatypes.py`**:
-    *   **Primitive & Built-in Types**: `int`, `float`, `complex` (using `j`), `str`, `bool`, and `None`.
-    *   **Type Inspection**: Using `type()` to determine object class.
-    *   **Type Conversion & Casting**: Explicit conversion with `str()`, `int()`, and `float()`, truncation behavior, and immutability of primitive types.
-*   **`03strings.py`**:
-    *   **Unicode Representation**: Character encoding and decoding using `ord()` and `chr()`.
-    *   **String Indexing**: Zero-based positive indexing (left-to-right) and negative indexing (right-to-left from end).
-    *   **String Slicing**: Slice syntax `[start : stop : step]`, default slice parameters, and string reversal using negative step (`[::-1]`).
-*   **`04in-out.py`**:
-    *   **Output with `print()`**: Multiple arguments with automatic space separation (`sep=" "`), newline ending behavior.
-    *   **String Formatting**: Comma-separated output vs. modern Python 3.6+ f-strings (`f"{var}"`).
-    *   **User Input with `input()`**: Reading terminal input, understanding that `input()` always returns a string (`str`), and typecasting input to numeric types (`int(input(...))`).
-*   **`05operators.py`**:
-    *   Arithmetic operators, comparison, logical, assignment, identity (`is`), and membership (`in`) operators *(in progress)*.
+Welcome to my Python learning repository! This repo documents my journey mastering Python from the ground up, covering core fundamentals through hands-on code examples, structured notes, and practical problem-solving.
 
 ---
 
-## 🛠️ How to Run Locally
-
-1. **Prerequisites:** Make sure you have Python 3 installed. Check with:
-   ```bash
-   python --version
-   ```
-
-2. **Clone the repository:**
-   ```bash
-   git clone https://github.com/spant671-ux/Learning-Python.git
-   ```
-
-3. **Run any script directly in the terminal:**
-   ```bash
-   python 01basics/01comms-and-var.py
-   python 01basics/02datatypes.py
-   python 01basics/03strings.py
-   python 01basics/04in-out.py
-   ```
+## 📚 Table of Contents
+- [📂 Topics Directory](#-topics-directory)
+- [🚀 Getting Started](#-getting-started)
+- [🛠️ Tech Stack & Tools](#️-tech-stack--tools)
+- [📝 Progress Tracker](#-progress-tracker)
+- [🤝 Contributing](#-contributing)
 
 ---
 
-## 🚀 Learning Progress
+## 📂 Topics Directory
 
-*   [x] **Python Basics**: Comments, Variables & Naming Rules
-*   [x] **Data Types & Type Casting**: Numbers, Booleans, Strings, `type()`
-*   [x] **String Manipulation**: Indexing, Slicing, Unicode (`ord`/`chr`)
-*   [x] **Input / Output**: `print()`, f-strings, `input()`
-*   [ ] **Operators**: Arithmetic, Relational, Logical, Assignment, Bitwise
-*   [ ] **Control Flow**: Conditionals (`if-elif-else`), Loops (`for`, `while`)
-*   [ ] **Data Structures**: Lists, Tuples, Dictionaries, Sets
-*   [ ] **Functions & Scopes**: Parameters, `*args`, `**kwargs`, Lambda functions
-*   [ ] **Object-Oriented Programming (OOP)**: Classes, Objects, Inheritance, Magic Methods
+| # | Folder | File | Description | Key Learnings |
+|---|---|---|---|---|
+| 01 | [`01basics`](./01basics) | [`01comms-and-var.py`](./01basics/01comms-and-var.py) | Comments & Variables | Single & multi-line comments, dynamic typing, variable naming rules, PEP 8 conventions |
+| 02 | [`01basics`](./01basics) | [`02datatypes.py`](./01basics/02datatypes.py) | Data Types & Conversion | Built-in types (`int`, `float`, `complex`, `str`, `bool`, `None`), `type()`, type casting (`str()`, `int()`) |
+| 03 | [`01basics`](./01basics) | [`03strings.py`](./01basics/03strings.py) | String Basics & Slicing | Unicode representations (`ord()`, `chr()`), positive & negative indexing, slice syntax `[start:stop:step]` |
+| 04 | [`01basics`](./01basics) | [`04in-out.py`](./01basics/04in-out.py) | Input & Output (I/O) | `print()` formatting, f-strings, reading user input with `input()`, typecasting input |
+| 05 | [`01basics`](./01basics) | [`05operators.py`](./01basics/05operators.py) | Operators | Arithmetic, compound assignment, relational, logical, identity (`is`), membership (`in`) |
+
+---
+
+## 🚀 Getting Started
+
+Make sure you have **Python 3** installed. Check your installation:
+
+```bash
+python --version
+```
+
+### Quick Examples:
+Run any file directly from the root directory:
+
+```bash
+# Comments & Variables
+python "01basics/01comms-and-var.py"
+
+# Data Types & Conversion
+python "01basics/02datatypes.py"
+
+# Strings & Slicing
+python "01basics/03strings.py"
+
+# Input & Output
+python "01basics/04in-out.py"
+
+# Operators
+python "01basics/05operators.py"
+```
+
+---
+
+## 🛠️ Tech Stack & Tools
+- **Language:** [Python](https://www.python.org/) (Python 3.10+)
+- **IDE:** VS Code / Antigravity IDE
+- **Runtime:** CPython
+- **Version Control:** Git & GitHub
+
+---
+
+## 📝 Progress Tracker
+
+- [x] Comments & Multi-line strings
+- [x] Variables & Naming Rules (PEP 8)
+- [x] Data Types (`int`, `float`, `complex`, `str`, `bool`, `None`)
+- [x] Type Checking (`type()`) & Type Conversion (`int()`, `str()`, etc.)
+- [x] Strings (Unicode `ord`/`chr`, Indexing, Slicing)
+- [x] Input & Output (`print()`, f-strings, `input()`)
+- [ ] Operators (Arithmetic, Assignment, Comparison, Logical, Bitwise)
+- [ ] Conditionals (`if`, `elif`, `else`, Ternary Operator)
+- [ ] Loops (`for`, `while`, `break`, `continue`, `pass`)
+- [ ] Lists & Tuples (Methods, Slicing, List Comprehension)
+- [ ] Dictionaries & Sets (Hash maps, Key-Value Pairs, Set Operations)
+- [ ] Functions & Scopes (def, `*args`, `**kwargs`, Lambda, Closures)
+- [ ] Object-Oriented Programming (Classes, Objects, Inheritance, Polymorphism)
+
+---
+
+## 🤝 Contributing
+
+This is a personal learning repository. Feel free to fork it and use it for your own Python journey!
+
+---
+
+*Happy Coding & Learning! 🚀*
