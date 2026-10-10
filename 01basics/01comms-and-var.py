@@ -1,21 +1,36 @@
-# --- Comments in Python ---
-# This is a single line comment. It is used to write short notes or explain a specific line of code.
+# Comments in Python
 
+# Single-line comment: Starts with '#' and is ignored by Python
+# This is a single line comment.
+
+# Multi-line comment: Python doesn't have a /* */ syntax like JS or Java.
+# Triple quotes (""" or ''') create multiline strings; when not assigned to a variable, they act as comments.
 """This is a
-Multi-Line Comment.
-It is often used for docstrings or when you need to write longer explanations that span multiple lines."""
+Multi-Line Comment."""
 
-# --- Variables ---
-# Variables are used to store data values. In Python, a variable is created the moment you first assign a value to it.
 
-# Assign integer 18 to variable 'a'
-a = 18 
+# Variables
+# Python is dynamically typed — variable types are inferred at runtime without declaration.
 
-# Assign string "Hello" to variable 'b'
+# Integer variable
+a = 18
+
+# String variable
 b = "Hello"
 
 # --- Rules for naming variables ---
-# 1. A variable name must start with a letter or the underscore character.
-# 2. Dont use number at start (e.g., 1name is invalid).
-# 3. Dont use space in variables (e.g., my name is invalid, use my_name instead).
-# 4. shouldnt use spcl characters in variable (e.g., @, #, $, %, etc. are not allowed).
+
+# 1. Dont use number at start (must begin with a letter or underscore):
+# 1a = 18          # SyntaxError: invalid decimal literal
+
+# 2. Dont use space in variables (use snake_case instead):
+# my var = "sans"  # SyntaxError: invalid syntax
+
+# 3. Shouldnt use spcl characters in variable (@, $, %, -, etc.):
+# my-var = "sans"  # SyntaxError: cannot assign to expression
+# user$ = 100      # SyntaxError: invalid syntax
+
+# 4. Variable names are case-sensitive:
+# age, Age, and AGE are treated as three separate variables
+
+# 5. Cannot use Python reserved keywords (like if, for, while, class, def, return)
