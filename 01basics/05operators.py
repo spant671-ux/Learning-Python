@@ -13,4 +13,7 @@ print(a//b)
 print(a**b)
 
 #2. assignment and compount assignment
-# = += -=
+# = += -= *= /= //= **=
+a+=20
+print(a)
+
