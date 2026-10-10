@@ -21,7 +21,7 @@ Welcome to my Python learning repository! This repo documents my journey masteri
 | 02 | [`01basics`](./01basics) | [`02datatypes.py`](./01basics/02datatypes.py) | Data Types & Conversion | Built-in types (`int`, `float`, `complex`, `str`, `bool`, `None`), `type()`, type casting (`str()`, `int()`) |
 | 03 | [`01basics`](./01basics) | [`03strings.py`](./01basics/03strings.py) | String Basics & Slicing | Unicode representations (`ord()`, `chr()`), positive & negative indexing, slice syntax `[start:stop:step]` |
 | 04 | [`01basics`](./01basics) | [`04in-out.py`](./01basics/04in-out.py) | Input & Output (I/O) | `print()` formatting, f-strings, reading user input with `input()`, typecasting input |
-| 05 | [`01basics`](./01basics) | [`05operators.py`](./01basics/05operators.py) | Operators | Arithmetic, compound assignment, relational, logical, identity (`is`), membership (`in`) |
+| 05 | [`01basics`](./01basics) | [`05operators.py`](./01basics/05operators.py) | Operators | Arithmetic (`+`, `-`, `*`, `/`, `%`, `//`, `**`), compound assignment (`+=`, `-=`, etc.), comparison (`==`, `!=`), and logical (`and`, `or`, `not`) |
 
 ---
 
@@ -71,7 +71,7 @@ python "01basics/05operators.py"
 - [x] Type Checking (`type()`) & Type Conversion (`int()`, `str()`, etc.)
 - [x] Strings (Unicode `ord`/`chr`, Indexing, Slicing)
 - [x] Input & Output (`print()`, f-strings, `input()`)
-- [ ] Operators (Arithmetic, Assignment, Comparison, Logical, Bitwise)
+- [x] Operators (Arithmetic, Assignment, Comparison, Logical)
 - [ ] Conditionals (`if`, `elif`, `else`, Ternary Operator)
 - [ ] Loops (`for`, `while`, `break`, `continue`, `pass`)
 - [ ] Lists & Tuples (Methods, Slicing, List Comprehension)
