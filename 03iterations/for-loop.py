@@ -130,3 +130,18 @@
 # else:
 #     print("Not a perfect number")
 
+# n = int(input("Check your number is prime or not: "))
+# count = 0
+# for i in range(1, n+1):
+#     if n%i == 0:
+#         count += 1
+
+# if count == 2: print("Your number is prime")
+# else: print("Your number isnt prime")
+
+a = "HELLO"
+b = ""
+# print(a[::-1])
+for i in range(len(a)-1, -1, -1):
+    b = b + a[i]
+print(b)
