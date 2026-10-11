@@ -20,3 +20,20 @@ a = int(input("Give a number: "))
 while a > 0:
     print(a % 10)   # Extracts the last digit
     a = a // 10     # Removes the last digit
+
+a = int(input("Give a number: "))
+rev = 0
+while a > 0:
+    rev = rev*10 + a % 10 
+    a = a // 10 
+print(rev)
+
+
+a = int(input("Give a number: "))
+copy = a
+rev = 0
+while a > 0:
+    rev = rev*10 + a % 10 
+    a = a // 10 
+if copy == rev: print("Palindrome")
+else: print("Not Palindrome")
