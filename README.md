@@ -26,6 +26,7 @@ Welcome to my Python learning repository! This repo documents my journey masteri
 | 07 | [`03iterations`](./03iterations) | [`for-loop.py`](./03iterations/for-loop.py) | Loops & Iterations | `for` loops, `range()`, `break`, `continue`, `for...else`, and practice problems (factorial, prime check, perfect number, string reversal, palindromes) |
 | 08 | [`03iterations`](./03iterations) | [`while-loop.py`](./03iterations/while-loop.py) | While Loops & Projects | `while` loops, digit extraction (`% 10`, `// 10`), reverse number, palindrome check, number guessing game project (`while True`, `break`, `random`) |
 | 09 | [`04functions`](./04functions) | [`function.py`](./04functions/function.py) | Functions | `def`, parameters vs arguments, positional & keyword arguments, default parameters, palindrome logic, `return` values |
+| 10 | [`06exception-handling`](./06exception-handling) | [`new.py`](./06exception-handling/new.py) | Exception Handling | Errors vs Exceptions, `try`, `except`, `else`, `finally`, manual exception triggering via `raise` |
 
 ---
 
@@ -65,6 +66,9 @@ python "03iterations/while-loop.py"
 
 # Functions
 python "04functions/function.py"
+
+# Exception Handling
+python "06exception-handling/new.py"
 ```
 
 ---
@@ -91,6 +95,7 @@ python "04functions/function.py"
 - [ ] Lists & Tuples (Methods, Slicing, List Comprehension)
 - [ ] Dictionaries & Sets (Hash maps, Key-Value Pairs, Set Operations)
 - [x] Functions (`def`, parameters, positional & keyword args, default values, `return`)
+- [x] Exception Handling (`try`, `except`, `else`, `finally`, `raise`)
 - [ ] Object-Oriented Programming (Classes, Objects, Inheritance, Polymorphism)
 
 ---
