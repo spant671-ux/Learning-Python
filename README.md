@@ -25,6 +25,7 @@ Welcome to my Python learning repository! This repo documents my journey masteri
 | 06 | [`02control-flow`](./02control-flow) | [`if-else.py`](./02control-flow/if-else.py) | Conditionals & Control Flow | `if`, `if-else`, `if-elif-else` ladder, single-line shorthand syntax, user-input decision making |
 | 07 | [`03iterations`](./03iterations) | [`for-loop.py`](./03iterations/for-loop.py) | Loops & Iterations | `for` loops, `range()`, `break`, `continue`, `for...else`, and practice problems (factorial, prime check, perfect number, string reversal, palindromes) |
 | 08 | [`03iterations`](./03iterations) | [`while-loop.py`](./03iterations/while-loop.py) | While Loops & Projects | `while` loops, digit extraction (`% 10`, `// 10`), reverse number, palindrome check, number guessing game project (`while True`, `break`, `random`) |
+| 09 | [`04functions`](./04functions) | [`function.py`](./04functions/function.py) | Functions | `def`, parameters vs arguments, positional & keyword arguments, default parameters, palindrome logic, `return` values |
 
 ---
 
@@ -61,6 +62,9 @@ python "02control-flow/if-else.py"
 # Loops & Iterations
 python "03iterations/for-loop.py"
 python "03iterations/while-loop.py"
+
+# Functions
+python "04functions/function.py"
 ```
 
 ---
@@ -86,7 +90,7 @@ python "03iterations/while-loop.py"
 - [x] Loops (`for`, `while`, `range`, `break`, `continue`, `for...else`)
 - [ ] Lists & Tuples (Methods, Slicing, List Comprehension)
 - [ ] Dictionaries & Sets (Hash maps, Key-Value Pairs, Set Operations)
-- [ ] Functions & Scopes (def, `*args`, `**kwargs`, Lambda, Closures)
+- [x] Functions (`def`, parameters, positional & keyword args, default values, `return`)
 - [ ] Object-Oriented Programming (Classes, Objects, Inheritance, Polymorphism)
 
 ---
