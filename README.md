@@ -22,6 +22,7 @@ Welcome to my Python learning repository! This repo documents my journey masteri
 | 03 | [`01basics`](./01basics) | [`03strings.py`](./01basics/03strings.py) | String Basics & Slicing | Unicode representations (`ord()`, `chr()`), positive & negative indexing, slice syntax `[start:stop:step]` |
 | 04 | [`01basics`](./01basics) | [`04in-out.py`](./01basics/04in-out.py) | Input & Output (I/O) | `print()` formatting, f-strings, reading user input with `input()`, typecasting input |
 | 05 | [`01basics`](./01basics) | [`05operators.py`](./01basics/05operators.py) | Operators | Arithmetic (`+`, `-`, `*`, `/`, `%`, `//`, `**`), compound assignment (`+=`, `-=`, etc.), comparison (`==`, `!=`), and logical (`and`, `or`, `not`) |
+| 06 | [`02control-flow`](./02control-flow) | [`if-else.py`](./02control-flow/if-else.py) | Conditionals & Control Flow | `if`, `if-else`, `if-elif-else` ladder, single-line shorthand syntax, user-input decision making |
 
 ---
 
@@ -51,6 +52,9 @@ python "01basics/04in-out.py"
 
 # Operators
 python "01basics/05operators.py"
+
+# Conditionals & Control Flow
+python "02control-flow/if-else.py"
 ```
 
 ---
@@ -72,7 +76,7 @@ python "01basics/05operators.py"
 - [x] Strings (Unicode `ord`/`chr`, Indexing, Slicing)
 - [x] Input & Output (`print()`, f-strings, `input()`)
 - [x] Operators (Arithmetic, Assignment, Comparison, Logical)
-- [ ] Conditionals (`if`, `elif`, `else`, Ternary Operator)
+- [x] Conditionals (`if`, `elif`, `else`, Shorthand syntax)
 - [ ] Loops (`for`, `while`, `break`, `continue`, `pass`)
 - [ ] Lists & Tuples (Methods, Slicing, List Comprehension)
 - [ ] Dictionaries & Sets (Hash maps, Key-Value Pairs, Set Operations)
