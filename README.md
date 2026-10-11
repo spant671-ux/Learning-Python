@@ -24,7 +24,7 @@ Welcome to my Python learning repository! This repo documents my journey masteri
 | 05 | [`01basics`](./01basics) | [`05operators.py`](./01basics/05operators.py) | Operators | Arithmetic (`+`, `-`, `*`, `/`, `%`, `//`, `**`), compound assignment (`+=`, `-=`, etc.), comparison (`==`, `!=`), and logical (`and`, `or`, `not`) |
 | 06 | [`02control-flow`](./02control-flow) | [`if-else.py`](./02control-flow/if-else.py) | Conditionals & Control Flow | `if`, `if-else`, `if-elif-else` ladder, single-line shorthand syntax, user-input decision making |
 | 07 | [`03iterations`](./03iterations) | [`for-loop.py`](./03iterations/for-loop.py) | Loops & Iterations | `for` loops, `range()`, `break`, `continue`, `for...else`, and practice problems (factorial, prime check, perfect number, string reversal, palindromes) |
-| 08 | [`03iterations`](./03iterations) | [`while-loop.py`](./03iterations/while-loop.py) | While Loops & Iteration | `while` loops, counter initialization & updates, digit extraction via `% 10` and `// 10` |
+| 08 | [`03iterations`](./03iterations) | [`while-loop.py`](./03iterations/while-loop.py) | While Loops & Projects | `while` loops, digit extraction (`% 10`, `// 10`), reverse number, palindrome check, number guessing game project (`while True`, `break`, `random`) |
 
 ---
 
