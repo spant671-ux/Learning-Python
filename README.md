@@ -27,7 +27,8 @@ Welcome to my Python learning repository! This repo documents my journey masteri
 | 08 | [`03iterations`](./03iterations) | [`while-loop.py`](./03iterations/while-loop.py) | While Loops & Projects | `while` loops, digit extraction (`% 10`, `// 10`), reverse number, palindrome check, number guessing game project (`while True`, `break`, `random`) |
 | 09 | [`04functions`](./04functions) | [`function.py`](./04functions/function.py) | Functions | `def`, parameters vs arguments, positional & keyword arguments, default parameters, palindrome logic, `return` values |
 | 10 | [`05data-structures`](./05data-structures) | [`lists.py`](./05data-structures/lists.py) | Data Structures - Lists | List properties (mutable, ordered, duplicates, heterogeneous), indexing, direct traversal, methods (`append`, `insert`, `extend`, `remove`), filtering, aggregate calculations, maximum element, second greatest, and sorted check with `for...else` |
-| 11 | [`06exception-handling`](./06exception-handling) | [`new.py`](./06exception-handling/new.py) | Exception Handling | Errors vs Exceptions, `try`, `except`, `else`, `finally`, manual exception triggering via `raise` |
+| 11 | [`05data-structures`](./05data-structures) | [`tuples.py`](./05data-structures/tuples.py) | Data Structures - Tuples | Tuple characteristics (immutable, ordered, duplicates, heterogeneous), single-element trailing comma rule `(1,)`, immutability principles, iteration, built-in methods (`index`, `count`), packing/unpacking, variable swapping, slicing, and list conversions |
+| 12 | [`06exception-handling`](./06exception-handling) | [`new.py`](./06exception-handling/new.py) | Exception Handling | Errors vs Exceptions, `try`, `except`, `else`, `finally`, manual exception triggering via `raise` |
 
 ---
 
@@ -68,8 +69,9 @@ python "03iterations/while-loop.py"
 # Functions
 python "04functions/function.py"
 
-# Data Structures - Lists
+# Data Structures - Lists & Tuples
 python "05data-structures/lists.py"
+python "05data-structures/tuples.py"
 
 # Exception Handling
 python "06exception-handling/new.py"
@@ -78,7 +80,7 @@ python "06exception-handling/new.py"
 ---
 
 ## 🛠️ Tech Stack & Tools
-- **Language:** [Python](https://www.python.org/) (Python 3.10+)
+- **Language:** [Python](https://www.python.org/) (Python 3.14+)
 - **IDE:** VS Code / Antigravity IDE
 - **Runtime:** CPython
 - **Version Control:** Git & GitHub
@@ -97,7 +99,8 @@ python "06exception-handling/new.py"
 - [x] Conditionals (`if`, `elif`, `else`, Shorthand syntax)
 - [x] Loops (`for`, `while`, `range`, `break`, `continue`, `for...else`)
 - [x] Lists (Properties, Traversal, Built-in Methods, Practice Algorithms)
-- [ ] Tuples & List Comprehension
+- [x] Tuples (Immutability, Single-element Trailing Comma, Packing/Unpacking, `index`/`count`)
+- [ ] List Comprehension & Advanced Slicing
 - [ ] Dictionaries & Sets (Hash maps, Key-Value Pairs, Set Operations)
 - [x] Functions (`def`, parameters, positional & keyword args, default values, `return`)
 - [x] Exception Handling (`try`, `except`, `else`, `finally`, `raise`)
