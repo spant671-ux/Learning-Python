@@ -32,6 +32,8 @@ Welcome to my Python learning repository! This repo documents my journey masteri
 | 12 | [`05data-structures`](./05data-structures) | [`sets.py`](./05data-structures/sets.py) | Data Structures - Sets | Set properties (unordered, unique/no duplicates, mutable container, hashable elements), empty set quirk `set()`, `hash()`, fast O(1) membership testing, modification (`add`, `remove`, `discard`, `pop`, `clear`), and mathematical set operations (union `|`, intersection `&`, difference `-`, symmetric difference `^`) |
 | 13 | [`05data-structures`](./05data-structures) | [`dictionary.py`](./05data-structures/dictionary.py) | Data Structures - Dictionaries | Key-Value mappings, key hashability rules, accessing via `[]` vs `.get()`, adding/updating, iteration (`keys`, `values`, `items`), removal (`del`, `pop`, `popitem`, `clear`), word frequency counter, and nested dictionaries |
 | 14 | [`06exception-handling`](./06exception-handling) | [`new.py`](./06exception-handling/new.py) | Exception Handling | Errors vs Exceptions, `try`, `except`, `else`, `finally`, manual exception triggering via `raise` |
+| 15 | [`07file-handling`](./07file-handling) | [`main.py`](./07file-handling/main.py) | File Handling | Persistent file storage, access modes (`'r'`, `'w'`, `'a'`), reading methods (`read`, `readline`, line iteration), writing (`write`, `writelines`), resource cleanup (`close`), and the `with` context manager |
+| 16 | [`07file-handling/project`](./07file-handling/project) | [`main.py`](./07file-handling/project/main.py) | Project: File Management System | CLI CRUD File Manager using `pathlib` and file handling: directory listing (`glob`), creating files, reading content, updating (append/overwrite), deleting (`unlink`), and menu navigation |
 
 ---
 
@@ -80,6 +82,10 @@ python "05data-structures/dictionary.py"
 
 # Exception Handling
 python "06exception-handling/new.py"
+
+# File Handling Basics & Project
+python "07file-handling/main.py"
+python "07file-handling/project/main.py"
 ```
 
 ---
@@ -110,13 +116,14 @@ python "06exception-handling/new.py"
 - [ ] List Comprehension & Advanced Slicing
 - [x] Functions (`def`, parameters, positional & keyword args, default values, `return`)
 - [x] Exception Handling (`try`, `except`, `else`, `finally`, `raise`)
+- [x] File Handling (Modes: r/w/a, read/readline, write/writelines, with Context Manager)
 - [ ] Object-Oriented Programming (Classes, Objects, Inheritance, Polymorphism)
 
 ---
 
 ## 📖 Study Handbook & Notes
 
-- **[NOTES.md](./NOTES.md)**: Curated, balanced conceptual study notes across all modules (Basics, Control Flow, Iterations, Functions, Data Structures, Exception Handling) with hand-drawable visual Mermaid architecture diagrams, code patterns, and golden interview rules.
+- **[NOTES.md](./NOTES.md)**: Curated, balanced conceptual study notes across all modules (Basics, Control Flow, Iterations, Functions, Data Structures, Exception Handling, File Handling) with hand-drawable visual Mermaid architecture diagrams, code patterns, and golden interview rules.
 
 ---
 

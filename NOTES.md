@@ -15,6 +15,7 @@ A structured, balanced reference guide covering core Python fundamentals, contro
 - [Module 8: Sets — Unique Unordered Collections (`05data-structures`)](#module-8-sets--unique-unordered-collections-05data-structures)
 - [Module 9: Dictionaries — Key-Value Hashmaps (`05data-structures`)](#module-9-dictionaries--key-value-hashmaps-05data-structures)
 - [Module 10: Exception Handling (`06exception-handling`)](#module-10-exception-handling-06exception-handling)
+- [Module 11: File Handling (`07file-handling`)](#module-11-file-handling-07file-handling)
 - [📊 Quick Revision Matrix](#-quick-revision-matrix)
 
 ---
@@ -438,6 +439,61 @@ if age < 0:
 
 ---
 
+## Module 11: File Handling (`07file-handling`)
+
+### 1. Key Concepts
+* **Persistence**: Files store data permanently on secondary storage (hard drive/SSD) beyond program execution lifetime.
+* **The File Lifecycle**: 1. `open()` $\rightarrow$ 2. Read/Write operations $\rightarrow$ 3. `close()`.
+* **The `with` Context Manager**: The industry-standard pattern that automatically closes file streams upon block exit, preventing memory leaks and data corruption.
+
+### 2. Architecture Diagram: File Lifecycle & Context Manager
+```mermaid
+graph LR
+    Open["open('file.txt', mode)"] --> Action["Execute I/O: read() / write()"]
+    Action --> Close["Automatic close via with block"]
+    Close --> Disk["Flushed & Saved to Disk"]
+```
+
+### 3. File Access Modes Reference
+| Mode | Meaning | Creates if missing? | Truncates (Overwrites)? | Pointer Position |
+| :---: | :--- | :---: | :---: | :--- |
+| `'r'` | **Read** (Default) | No (Raises `FileNotFoundError`) | No | Start of file |
+| `'w'` | **Write** | Yes | **Yes** (Wipes all content) | Start of file |
+| `'a'` | **Append** | Yes | No (Preserves content) | End of file |
+| `'r+'`| Read & Write | No | No | Start of file |
+| `'w+'`| Write & Read | Yes | **Yes** | Start of file |
+| `'a+'`| Append & Read | Yes | No | End of file |
+| `'b'` | Binary (e.g. `'rb'`, `'wb'`) | - | - | For images, audio, PDFs |
+
+### 4. Syntax & Examples
+```python
+# 1. Reading using the 'with' Context Manager (Recommended)
+with open("file.txt", "r") as f:
+    content = f.read()          # Reads entire file as single string
+    # line = f.readline()       # Reads next single line
+    # lines = f.readlines()     # Reads all lines into a list of strings
+
+# 2. Writing (Overwrites existing content)
+with open("output.txt", "w") as f:
+    f.write("First line of text\n")
+
+# 3. Appending (Adds to end without wiping)
+with open("output.txt", "a") as f:
+    f.write("Second appended line\n")
+
+# 4. Writing multiple lines at once:
+lines = ["Alpha\n", "Beta\n", "Gamma\n"]
+with open("list.txt", "w") as f:
+    f.writelines(lines)
+```
+
+### 5. ⚠️ Common Traps & Gotchas
+* **`'w'` Mode Overwrites**: Opening an existing file in `'w'` mode wipes all previous content immediately, even before you call `write()`. Use `'a'` to preserve data.
+* **Always Close or Use `with`**: Failing to close files can leave unwritten buffer data in memory and lock files in the operating system.
+* **Windows File Paths**: Use raw strings (`r'C:\path\to\file'`) or forward slashes (`'C:/path/to/file'`) to prevent backslashes from being treated as escape characters like `\n` or `\t`.
+
+---
+
 ## 📊 Quick Revision Matrix
 
 ### The 4 Python Data Structures
@@ -458,3 +514,4 @@ if age < 0:
 6. **Floor Division**: `//` truncates decimals; `/` always produces a float.
 7. **Cleanup Guarantee**: `finally:` is guaranteed to execute, making it ideal for closing files/connections.
 8. **Raise Exceptions**: `raise ValueError("msg")` manually triggers an exception.
+9. **File Context Manager**: `with open(f, 'r') as f:` automatically closes files safely even on exceptions.

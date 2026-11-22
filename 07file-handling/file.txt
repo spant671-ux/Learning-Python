@@ -1,1 +1,1 @@
-Hello, this is a file made by w commamnd and written by write command.
+Hello, this is a file made by w commamnd and written by write command.and now im appending some content inside file
