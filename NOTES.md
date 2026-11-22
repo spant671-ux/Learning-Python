@@ -1,418 +1,460 @@
-# 📘 Python Handbook & Study Notes
+# 📓 Python Study Handbook (Notebook Edition)
 
-A curated, balanced study guide designed for conceptual clarity, quick revision, and handwritten note-taking. Each module outlines the core problem it solves, a clean hand-drawable diagram, minimal essential code, and golden interview rules.
-
----
-
-## 📚 Table of Contents
-- [Module 1: Basics, Variables & Operators (`01basics`)](#module-1-basics-variables--operators-01basics)
-- [Module 2: Control Flow & Conditionals (`02control-flow`)](#module-2-control-flow--conditionals-02control-flow)
-- [Module 3: Loops & Iterations (`03iterations`)](#module-3-loops--iterations-03iterations)
-- [Module 4: Functions & Scope (`04functions`)](#module-4-functions--scope-04functions)
-- [Module 5: Core Data Structures (`05data-structures`)](#module-5-core-data-structures-05data-structures)
-- [Module 6: Exception Handling (`06exception-handling`)](#module-6-exception-handling-06exception-handling)
-- [📊 Python Master Cheat Sheet](#-python-master-cheat-sheet)
+A structured, handwriting-friendly reference guide designed specifically for copying into an actual paper notebook. Every section includes **Concept Summaries**, **15-Second Sketch Diagrams**, **Syntax Formulas**, **Micro Examples**, and **Exam/Interview Traps**.
 
 ---
 
-## Module 1: Basics, Variables & Operators (`01basics`)
+## 📑 Table of Contents
+- [Page 1: Python Basics & Strings (`01basics`)](#page-1-python-basics--strings-01basics)
+- [Page 2: Operators & Expressions (`01basics`)](#page-2-operators--expressions-01basics)
+- [Page 3: Control Flow & Conditionals (`02control-flow`)](#page-3-control-flow--conditionals-02control-flow)
+- [Page 4: Loops & Iterations (`03iterations`)](#page-4-loops--iterations-03iterations)
+- [Page 5: Functions & Scope (`04functions`)](#page-5-functions--scope-04functions)
+- [Page 6: Lists — Mutable Sequences (`05data-structures`)](#page-6-lists--mutable-sequences-05data-structures)
+- [Page 7: Tuples — Immutable Sequences (`05data-structures`)](#page-7-tuples--immutable-sequences-05data-structures)
+- [Page 8: Sets — Unique Unordered Collections (`05data-structures`)](#page-8-sets--unique-unordered-collections-05data-structures)
+- [Page 9: Dictionaries — Key-Value Hashmaps (`05data-structures`)](#page-9-dictionaries--key-value-hashmaps-05data-structures)
+- [Page 10: Exception Handling (`06exception-handling`)](#page-10-exception-handling-06exception-handling)
+- [📝 Quick Notebook Revision Matrix](#-quick-notebook-revision-matrix)
 
-### 1. Core Purpose
-Python is a dynamically typed, interpreted, high-level language. Variables do not require explicit type declarations; Python infers the type at runtime based on the assigned value.
+---
 
-### 2. Handbook Diagram
+## Page 1: Python Basics & Strings (`01basics`)
+
+### 1. Key Concept
+* **Interpreted & Dynamically Typed**: Variables do not need type declarations; types are determined at runtime.
+* **Basic Data Types**: `int` (42), `float` (3.14), `str` ("hello"), `bool` (`True`/`False`), `NoneType` (`None`).
+
+### 2. Notebook Diagram: Python Execution Pipeline
 ```mermaid
-graph TD
-    Source["Python Source (.py)"] --> Bytecode["Bytecode Compilation (.pyc)"]
+graph LR
+    Source[".py Source Code"] --> Compiler["CPython Compiler"]
+    Compiler --> Bytecode[".pyc Bytecode"]
     Bytecode --> PVM["Python Virtual Machine (PVM)"]
-    PVM --> Output["Standard Output / Terminal"]
+    PVM --> Output["Terminal Output"]
 ```
 
-### 3. Essential Syntax & Patterns
+### 3. String Indexing & Slicing Formula
+```text
+  +Index :   0   1   2   3   4   5
+  Chars  : | P | Y | T | H | O | N |
+  -Index :  -6  -5  -4  -3  -2  -1
+```
+* **Slicing Syntax**: `string[start : stop : step]`
+  * `start` = inclusive (default: `0`)
+  * `stop`  = exclusive (default: `len`)
+  * `step`  = step size / direction (default: `1`)
 
+### 4. Micro Examples for Notebook
 ```python
-# 1. Variables & Dynamic Typing
-name = "Sans"       # str
-age = 21            # int
-pi = 3.14           # float
-is_active = True    # bool
-data = None         # NoneType
+s = "PYTHON"
+print(s[0:4])    # 'PYTH'  (stops before index 4)
+print(s[::-1])   # 'NOHTYP' (Reverse string formula)
+print(ord("A"))  # 65 (Character to Unicode)
+print(chr(65))   # 'A' (Unicode to Character)
 
-# 2. Type Checking & Casting
-print(type(age))    # Output: <class 'int'>
-num_str = str(age)  # "21"
-num_int = int("45") # 45
-
-# 3. String Slicing: [start : stop : step]
-# - start: inclusive (default: 0)
-# - stop: exclusive (default: len)
-# - step: stride (default: 1)
-text = "PYTHON"
-print(text[0:4:1])  # 'PYTH'
-print(text[::-1])   # 'NOHTYP' (Reverse string trick)
-print(ord("A"))     # 65 (Unicode code point)
-print(chr(65))      # 'A'
-
-# 4. Input & Formatted Output
-user_input = int(input("Enter number: "))
-print(f"Value squared is: {user_input ** 2}")
-
-# 5. Core Operators
-# Arithmetic: +  -  *  / (float)  // (floor division)  % (modulo)  ** (power)
-# Comparison: ==  !=  >  <  >=  <=
-# Logical   : and  or  not
+# User Input & Typecasting
+age = int(input("Enter age: "))
+print(f"Next year: {age + 1}")
 ```
 
-### 4. Golden Rules for Your Handbook
-* **Division Differences**: `/` always returns a float (e.g. `10 / 2` $\rightarrow$ `5.0`). Use `//` for integer floor division (e.g. `10 // 2` $\rightarrow$ `5`).
-* **Strings are Immutable**: Modifying a character via `text[0] = 'J'` raises a `TypeError`. Slicing always creates a brand-new string.
-* **`input()` Always Returns `str`**: Always wrap with `int()` or `float()` when numeric calculations are needed.
+### 5. ⚠️ Traps for Your Notebook
+* **Strings are Immutable**: You cannot do `s[0] = 'J'`. Slicing always returns a new string.
+* **`input()` Always Returns `str`**: Forgetting `int()` or `float()` causes string concatenation instead of math (`"5" + "5"` = `"55"`).
 
 ---
 
-## Module 2: Control Flow & Conditionals (`02control-flow`)
+## Page 2: Operators & Expressions (`01basics`)
 
-### 1. Core Purpose
-Control flow directs the execution path of a program based on boolean evaluations (`True` or `False`). Python uses **strict indentation (4 spaces)** to define blocks instead of curly braces `{}`.
+### 1. Key Concept
+Operators perform operations on variables and values. Python supports arithmetic, relational, logical, and assignment operators.
 
-### 2. Handbook Diagram
+### 2. Operator Reference Table
+| Category | Operator | Example | Result / Meaning |
+| :--- | :--- | :--- | :--- |
+| **Float Division** | `/` | `10 / 4` | `2.5` (Always returns float) |
+| **Floor Division** | `//` | `10 // 4` | `2` (Discards decimal remainder) |
+| **Modulo** | `%` | `10 % 3` | `1` (Returns remainder) |
+| **Power / Exponent**| `**` | `2 ** 3` | `8` ($2^3$) |
+| **Comparison** | `==`, `!=` | `5 != 3` | `True` (Checks equality/inequality) |
+| **Logical** | `and`, `or`, `not` | `x and y` | Short-circuit boolean evaluation |
+
+### 3. ⚠️ Traps for Your Notebook
+* `/` vs `//`: `10 / 2` gives `5.0` (float), while `10 // 2` gives `5` (int).
+* Precedence: `**` (highest) $\rightarrow$ `*`, `/`, `//`, `%` $\rightarrow$ `+`, `-`. Use parentheses `()` to enforce order.
+
+---
+
+## Page 3: Control Flow & Conditionals (`02control-flow`)
+
+### 1. Key Concept
+Directs program execution based on condition tests. Python uses **4 spaces indentation** to define blocks instead of `{}`.
+
+### 2. Notebook Diagram: Decision Ladder
 ```mermaid
 graph TD
-    Start["Evaluate Condition"] --> Check{"Condition is True?"}
-    Check -- "Yes (True)" --> IfBlock["Execute if code block"]
-    Check -- "No (False)" --> ElifCheck{"Next elif condition?"}
-    ElifCheck -- "Yes (True)" --> ElifBlock["Execute elif code block"]
-    ElifCheck -- "No (False)" --> ElseBlock["Execute else fallback block"]
-    IfBlock --> Exit["Continue Program Execution"]
-    ElifBlock --> Exit
+    Start["Condition 1 (if)"] -->|True| Block1["Execute Block 1"]
+    Start -->|False| Cond2["Condition 2 (elif)"]
+    Cond2 -->|True| Block2["Execute Block 2"]
+    Cond2 -->|False| ElseBlock["Execute else Fallback"]
+    Block1 --> Exit["Resume Code"]
+    Block2 --> Exit
     ElseBlock --> Exit
 ```
 
-### 3. Essential Syntax & Patterns
-
+### 3. Syntax & Micro Examples
 ```python
-score = 85
-
-# 1. if-elif-else Ladder
+# 1. Standard if-elif-else Ladder
+score = 82
 if score >= 90:
     grade = "A"
 elif score >= 80:
     grade = "B"
-elif score >= 70:
-    grade = "C"
 else:
-    grade = "F"
+    grade = "C"
 
-# 2. Short-Hand / Ternary One-Liner
-# Syntax: value_if_true if condition else value_if_false
-status = "Adult" if age >= 18 else "Minor"
+# 2. Ternary / One-Liner Shorthand
+# Formula: value_if_true if condition else value_if_false
+status = "Pass" if score >= 50 else "Fail"
 
 # 3. Falsy Values in Python
 # Evaluates to False: 0, 0.0, "", [], (), {}, set(), None, False
-items = []
-if not items:
-    print("List is empty!")  # Idiomatic Python check
+cart = []
+if not cart:
+    print("Cart is empty!")  # Clean, Pythonic falsy check
 ```
 
-### 4. Golden Rules for Your Handbook
-* **First Match Wins**: In an `if-elif-else` ladder, once a condition evaluates to `True`, Python executes that block and immediately skips all remaining checks.
-* **Indentation Defines Scope**: Mixing tabs and spaces raises a `TabError` or `IndentationError`. Always stick to 4 standard spaces.
+### 4. ⚠️ Traps for Your Notebook
+* **First Match Wins**: Once any `if` or `elif` evaluates to `True`, the remaining ladder is completely skipped.
+* **Indentation Rules**: Never mix tabs and spaces. Use 4 spaces consistently.
 
 ---
 
-## Module 3: Loops & Iterations (`03iterations`)
+## Page 4: Loops & Iterations (`03iterations`)
 
-### 1. Core Purpose
-Loops automate repetitive operations. Python provides `for` loops (best for iterating over sequences and ranges) and `while` loops (best when the number of iterations depends on a changing condition).
+### 1. Key Concept
+* **`for` loop**: Definite loop used when the number of iterations or the collection is known.
+* **`while` loop**: Indefinite loop that repeats as long as a condition evaluates to `True`.
 
-### 2. Handbook Diagram
+### 2. Notebook Diagram: The `for...else` Flow
 ```mermaid
 graph TD
-    Start["Loop Starts"] --> Condition{"More items or condition True?"}
-    Condition -- "Yes" --> Body["Execute Loop Body"]
-    Body --> BreakCheck{"Encountered break?"}
-    BreakCheck -- "Yes" --> BreakExit["Terminate Loop: skip else block"]
-    BreakCheck -- "No" --> Condition
-    Condition -- "No (Natural Finish)" --> ElseBlock["Execute else block"]
-    ElseBlock --> End["Continue Program"]
-    BreakExit --> End
+    Start["Loop Iteration"] --> Check{"More items to loop?"}
+    Check -- "Yes" --> Body["Execute Body"]
+    Body --> BreakTest{"Hit break?"}
+    BreakTest -- "Yes" --> Exit["Exit Loop: SKIP else block"]
+    BreakTest -- "No" --> Check
+    Check -- "No (Finished Naturally)" --> ElseBlock["Execute else Block"]
+    ElseBlock --> Done["Continue Program"]
+    Exit --> Done
 ```
 
-### 3. Essential Syntax & Patterns
+### 3. Syntax & Micro Examples
 
 ```python
-# 1. for loop with range(start, stop, step)
+# 1. range(start, stop, step) -> stop is EXCLUSIVE
 for i in range(1, 10, 2):  # 1, 3, 5, 7, 9
     print(i, end=" ")
 
-# 2. Loop Control: break vs continue
-for n in range(1, 6):
-    if n == 2:
-        continue  # Skips only current iteration (skips 2)
-    if n == 4:
-        break     # Terminates the entire loop at 4
-    print(n)      # Prints 1, then 3
+# 2. Loop Control
+# break    -> Terminates loop immediately
+# continue -> Skips only current iteration
 
-# 3. The for...else & while...else Construct
-# 'else' executes ONLY IF the loop finishes normally without encountering 'break'
-target = 7
-for num in [2, 4, 6, 8]:
-    if num == target:
-        print("Found target!")
+# 3. The for...else Pattern (Search Target)
+items = [2, 4, 6, 8]
+for x in items:
+    if x == 5:
+        print("Found!")
         break
 else:
-    print("Target not found in list!")  # Executes here
+    print("Not Found!")  # Runs ONLY if loop finished WITHOUT break
 
-# 4. while loop: Mathematical Digit Extraction Pattern
-num = 1234
-reversed_num = 0
-
-while num > 0:
-    digit = num % 10                        # Extract last digit
-    reversed_num = reversed_num * 10 + digit # Append to reversed
-    num = num // 10                         # Strip last digit
-
-print(f"Reversed: {reversed_num}")  # Output: 4321
+# 4. Math Digit Extraction Pattern (Classic while loop)
+n = 1234
+rev = 0
+while n > 0:
+    digit = n % 10        # 1. Extract last digit
+    rev = rev * 10 + digit # 2. Shift left & append
+    n = n // 10           # 3. Discard last digit
+print(rev)  # 4321
 ```
 
-### 4. Golden Rules for Your Handbook
-* **`range()` Stop is Exclusive**: `range(1, 5)` yields values `1, 2, 3, 4` (never reaches 5).
-* **The `else` in Loops**: In Python, loop `else` blocks act as a "no-break" detector. Ideal for prime checks, search algorithms, and validation.
-* **Prevent Infinite While Loops**: Ensure the loop variable is updated (`n += 1` or `n //= 10`) inside the body.
+### 4. ⚠️ Traps for Your Notebook
+* `range(1, 5)` yields `1, 2, 3, 4` — it stops **before** `5`.
+* Forgetting `n //= 10` or `i += 1` inside a `while` loop creates an **infinite loop**.
 
 ---
 
-## Module 4: Functions & Scope (`04functions`)
+## Page 5: Functions & Scope (`04functions`)
 
-### 1. Core Purpose
-Functions encapsulate reusable logic into modular, callable blocks following the **DRY (Don't Repeat Yourself)** engineering principle.
+### 1. Key Concept
+Functions are reusable blocks of code defined by `def`. They help structure programs modularly and eliminate redundant code (DRY principle).
 
-### 2. Handbook Diagram
+### 2. Notebook Diagram: Function Call Pipeline
 ```mermaid
 graph LR
-    Caller["Caller: add(5, 10)"] --> MapArgs["Map Positional & Keyword Arguments"]
-    MapArgs --> Body["Execute Function Body"]
-    Body --> ReturnCheck{"Explicit return value?"}
-    ReturnCheck -- "Yes" --> SendValue["Return computed value"]
-    ReturnCheck -- "No" --> SendNone["Return None (default)"]
-    SendValue --> Receiver["Caller receives result"]
-    SendNone --> Receiver
+    Call["Call: calc_tax(100, 0.18)"] --> Params["Bind Arguments to Parameters"]
+    Params --> Logic["Execute Body"]
+    Logic --> Ret{"return value?"}
+    Ret -- "Yes" --> Val["Return Value"]
+    Ret -- "No" --> NoneVal["Return None"]
+    Val --> Caller["Caller gets result"]
+    NoneVal --> Caller
 ```
 
-### 3. Essential Syntax & Patterns
-
+### 3. Syntax & Micro Examples
 ```python
-# 1. Definition, Parameters, and Return
+# 1. Basic Function & Return
 def add(a, b):
     return a + b
 
-result = add(10, 5)  # 15
+# 2. Types of Arguments
+def profile(name, role="Student", age=20):
+    return f"{name} ({role}), Age: {age}"
 
-# 2. Argument Types
-# A. Positional Arguments: matched in exact order
-def user_info(name, age):
-    return f"{name} is {age} years old"
+# Positional:
+print(profile("Sans", "Dev", 21))
 
-# B. Keyword Arguments: passed by name, order does not matter
-user_info(age=21, name="Sans")
+# Keyword (order doesn't matter):
+print(profile(age=21, name="Sans"))
 
-# C. Default Arguments: fallback value if omitted in call
-# Note: Default parameters must ALWAYS follow non-default parameters!
-def calculate_tax(amount, rate=0.18):
-    return amount * rate
+# Default (uses fallback for role & age):
+print(profile("Sans"))
 
-print(calculate_tax(1000))        # Uses default rate 0.18 -> 180.0
-print(calculate_tax(1000, 0.05))  # Overrides default -> 50.0
+# 3. Functions without return implicitly return None:
+def greet():
+    print("Hello")
 
-# 3. Functions without return implicitly return None
-def do_nothing():
-    pass
-
-print(do_nothing())  # Output: None
+res = greet()
+print(res)  # Output: None
 ```
 
-### 4. Golden Rules for Your Handbook
-* **Parameter vs Argument**: Parameters are the variables in the function declaration (`def fn(x, y):`); arguments are the actual values passed during invocation (`fn(1, 2)`).
-* **Default Argument Order**: Never put a default parameter before a non-default parameter (`def fn(a=1, b):` $\rightarrow$ `SyntaxError`).
-* **Implicit Return**: If a function finishes without an explicit `return` statement, it returns `None`.
+### 4. ⚠️ Traps for Your Notebook
+* **Default Argument Order**: Default parameters must **always follow** positional parameters.
+  * `def f(a=1, b):` ❌ `SyntaxError: non-default parameter follows default parameter`
+  * `def f(b, a=1):` ✅ Correct.
 
 ---
 
-## Module 5: Core Data Structures (`05data-structures`)
+## Page 6: Lists — Mutable Sequences (`05data-structures`)
 
-Python provides four built-in collection data structures, each optimized for specific access patterns, mutability requirements, and uniqueness rules.
+### 1. Key Concept
+A **List** (`[]`) is an ordered, mutable sequence that allows duplicate elements of heterogeneous data types.
 
-### 1. Handbook Comparison Diagram
-```mermaid
-graph TD
-    Data["Collection of Data"] --> Ordered{"Does order matter?"}
-    Ordered -- "Yes (Ordered)" --> Mut{"Need to modify in-place?"}
-    Mut -- "Yes" --> ListType["List: [1, 2, 3]<br/>Mutable, allows duplicates"]
-    Mut -- "No" --> TupleType["Tuple: (1, 2, 3)<br/>Immutable, hashable, allows duplicates"]
-    Ordered -- "No (Unordered)" --> KeyVal{"Store Key-Value pairs?"}
-    KeyVal -- "Yes" --> DictType["Dictionary: {'k': 'v'}<br/>Unique hashable keys, mutable values"]
-    KeyVal -- "No" --> SetType["Set: {1, 2, 3}<br/>Unique items only, fast O(1) lookup"]
+### 2. Notebook Memory Box
+```text
+List = [ Item 0, Item 1, Item 2, ... ]
+Characteristics: [✔] Mutable   [✔] Ordered   [✔] Duplicates   [✔] Any Type
 ```
 
----
+### 3. Essential List Methods Cheat Sheet
+| Method | Action | Time Complexity |
+| :--- | :--- | :--- |
+| `l.append(x)` | Appends `x` to the end | $O(1)$ |
+| `l.insert(i, x)`| Inserts `x` at index `i` | $O(n)$ |
+| `l.extend(iter)`| Appends all items from iterable | $O(k)$ |
+| `l.remove(x)` | Removes first occurrence of value `x` | $O(n)$ (raises `ValueError` if absent) |
+| `l.pop(i)` | Removes and returns item at index `i` | $O(1)$ for end, $O(n)$ for middle |
+| `l.clear()` | Empties the list (`[]`) | $O(1)$ |
 
-### 2. Lists (`lists.py`)
-* **Properties**: Mutable, Ordered, Allows Duplicates, Heterogeneous.
-* **Essential Methods**:
-  * `.append(x)`: Adds item to the end ($O(1)$).
-  * `.insert(index, x)`: Inserts item at index, shifting elements right ($O(n)$).
-  * `.extend(iterable)`: Appends elements from another list to the end.
-  * `.remove(x)`: Removes first occurrence of value `x` (raises `ValueError` if absent).
-  * `.pop(index)`: Removes and returns element at index (defaults to last item).
-
+### 4. Micro Examples for Notebook
 ```python
 nums = [10, 20, 30]
-nums.append(40)          # [10, 20, 30, 40]
-nums.insert(1, 15)       # [10, 15, 20, 30, 40]
-nums.remove(20)          # [10, 15, 30, 40]
-print("Index 0:", nums[0]) # Direct 0-based indexing
+nums[0] = 99             # In-place mutation: [99, 20, 30]
+nums.append(40)          # [99, 20, 30, 40]
+nums.insert(1, 15)       # [99, 15, 20, 30, 40]
+nums.remove(20)          # [99, 15, 30, 40]
+
+# Traversal
+for val in nums:
+    print(val, end=" ")
 ```
 
 ---
 
-### 3. Tuples (`tuples.py`)
-* **Properties**: Immutable, Ordered, Allows Duplicates, Heterogeneous.
-* **Single-Element Quirk**: A trailing comma is required to create a 1-item tuple: `t = (5,)` is a `tuple`, while `t = (5)` is an `int`.
-* **Why Use Tuples?**:
-  1. **Data Integrity**: Guarantees read-only constants that cannot be altered.
-  2. **Performance**: Less memory overhead and faster creation than lists.
-  3. **Hashable**: Can be used as dictionary keys or set elements.
-* **Only 2 Methods**: `.index(x)` and `.count(x)`.
+## Page 7: Tuples — Immutable Sequences (`05data-structures`)
 
+### 1. Key Concept
+A **Tuple** (`()`) is an ordered, immutable sequence. Once created, its elements cannot be changed, added, or deleted.
+
+### 2. Notebook Memory Box
+```text
+Tuple = ( Item 0, Item 1, Item 2, ... )
+Characteristics: [❌] Immutable   [✔] Ordered   [✔] Duplicates   [✔] Hashable
+```
+
+### 3. Why Use Tuples over Lists?
+1. **Data Integrity**: Protects constants/coordinates from accidental mutation.
+2. **Performance**: Allocates faster and consumes less memory than lists.
+3. **Dictionary Keys**: Can be used as dict keys and set items (because they are hashable).
+
+### 4. Micro Examples for Notebook
 ```python
-point = (10, 20)
-x, y = point             # Tuple unpacking: x=10, y=20
-val1, val2 = 1, 2
-val1, val2 = val2, val1  # Pythonic swap via tuple unpacking
+# The Single-Item Comma Quirk:
+not_a_tuple = (5)   # Type: int (evaluated as math parentheses!)
+is_a_tuple  = (5,)  # Type: tuple (trailing comma is REQUIRED)
+
+# Only 2 Built-in Methods:
+t = (1, 2, 2, 3)
+print(t.count(2))   # 2 (occurrences of 2)
+print(t.index(3))   # 3 (first index of 3)
+
+# Tuple Unpacking & Pythonic Swap:
+x, y = 10, 20
+x, y = y, x         # Clean swap without temporary variable!
 ```
 
 ---
 
-### 4. Sets (`sets.py`)
-* **Properties**: Mutable container of Hashable items, Unordered, Unique (No Duplicates).
-* **The Empty Set Quirk**: `{}` creates an empty `dict`. Always use `set()` to create an empty set!
-* **Hashability**: Sets use hash tables internally, giving ultra-fast $O(1)$ average membership testing (`item in my_set`). Elements must be immutable/hashable.
-* **Mathematical Operations**:
-  * Union: `A | B` or `A.union(B)`
-  * Intersection: `A & B` or `A.intersection(B)`
-  * Difference: `A - B` or `A.difference(B)`
-  * Symmetric Difference: `A ^ B` or `A.symmetric_difference(B)`
+## Page 8: Sets — Unique Unordered Collections (`05data-structures`)
 
+### 1. Key Concept
+A **Set** (`{}`) is an unordered collection of **unique, hashable elements**. Sets automatically eliminate duplicate entries.
+
+### 2. Notebook Memory Box
+```text
+Set = { Element 1, Element 2, Element 3, ... }
+Characteristics: [✔] Mutable Container   [❌] Unordered   [❌] No Duplicates   [✔] Hashable Items Only
+```
+
+### 3. Set Operations (Math Operators vs Methods)
+| Operation | Operator | Method | Meaning |
+| :--- | :---: | :--- | :--- |
+| **Union** | `A \| B` | `A.union(B)` | All elements from both sets |
+| **Intersection** | `A & B` | `A.intersection(B)` | Common elements present in both |
+| **Difference** | `A - B` | `A.difference(B)` | Elements in A but not in B |
+| **Symmetric Diff**| `A ^ B` | `A.symmetric_difference(B)` | Elements in either A or B, but not both |
+
+### 4. Micro Examples for Notebook
 ```python
-s = {1, 2, 3, 3, 2}
-print(s)                 # Output: {1, 2, 3} (Duplicates removed)
-s.add(4)                 # Adds 4
-s.discard(99)            # Safe removal: no error if item absent
+# 1. Automatic Deduplication
+s = {1, 2, 2, 3, 3, 3}
+print(s)  # {1, 2, 3}
+
+# 2. The Empty Set Quirk:
+empty_dict = {}     # type is dict!
+empty_set  = set()  # type is set (MUST use constructor)
+
+# 3. Adding & Safe Removing:
+s.add(4)
+s.remove(2)   # Raises KeyError if 2 is missing
+s.discard(99) # Safe: does NOT throw error if item missing
+
+# 4. Fast O(1) Membership Test:
+if 3 in s:
+    print("Found in O(1) time!")
 ```
 
 ---
 
-### 5. Dictionaries (`dictionary.py`)
-* **Properties**: Key-Value Mapping, Mutable, Unique Hashable Keys, Insertion Ordered (Python 3.7+).
-* **Accessing Keys**:
-  * `d[key]`: Fast lookup, but raises `KeyError` if key is missing.
-  * `d.get(key, default)`: Safe lookup returning `None` (or default value) if missing.
-* **Traversals**:
-  * `for k in d:` iterates keys.
-  * `for v in d.values():` iterates values.
-  * `for k, v in d.items():` unpacks key-value pairs simultaneously.
+## Page 9: Dictionaries — Key-Value Hashmaps (`05data-structures`)
 
+### 1. Key Concept
+A **Dictionary** (`{key: value}`) stores associative key-value mappings. It uses hash tables under the hood, enabling instant $O(1)$ lookups.
+
+### 2. Notebook Memory Box
+```text
+Dict = { Key1: Val1, Key2: Val2, ... }
+Characteristics: [✔] Mutable   [✔] Ordered (3.7+)   [❌] Unique Keys   [✔] Hashable Keys Only
+```
+
+### 3. Syntax & Micro Examples
 ```python
-# 1. Declaration & Safe Access
+# 1. Key Rule: Keys must be immutable (str, int, tuple). Lists CANNOT be keys!
 user = {"name": "Sans", "role": "Dev"}
-print(user.get("age", 21))   # Returns fallback default 21
 
-# 2. Word Frequency Counter Pattern
-sentence = "apple banana apple"
+# 2. Safe Access with .get():
+# user["age"]        -> ❌ Raises KeyError!
+print(user.get("age", 21))  # ✅ Returns 21 (fallback default)
+
+# 3. Iteration Patterns:
+for k in user:               # Keys
+    print(k)
+for v in user.values():      # Values
+    print(v)
+for k, v in user.items():    # Both (Tuple Unpacking)
+    print(f"{k} -> {v}")
+
+# 4. Word Frequency Counter (Classic Interview Pattern):
+words = ["apple", "banana", "apple"]
 freq = {}
-for word in sentence.split():
-    freq[word] = freq.get(word, 0) + 1
-# Output: {'apple': 2, 'banana': 1}
+for w in words:
+    freq[w] = freq.get(w, 0) + 1
+print(freq)  # {'apple': 2, 'banana': 1}
 ```
+
+### 4. ⚠️ Traps for Your Notebook
+* `del d[k]` and `d.pop(k)` raise `KeyError` if `k` is missing. Use `d.pop(k, None)` or `d.get()` to avoid crashes.
+* Duplicate keys in a literal overwrite previous values: `{"a": 1, "a": 2}` becomes `{"a": 2}`.
 
 ---
 
-## Module 6: Exception Handling (`06exception-handling`)
+## Page 10: Exception Handling (`06exception-handling`)
 
-### 1. Core Purpose
-Exception handling manages runtime errors gracefully, preventing sudden script crashes and allowing programs to log errors, clean up resources, and recover smoothly.
+### 1. Key Concept
+Exception handling intercepts runtime errors to prevent program crashes, allowing graceful error logging, user notifications, and resource cleanup.
 
-### 2. Handbook Diagram
+### 2. Notebook Diagram: The `try-except-else-finally` Lifecycle
 ```mermaid
 graph TD
-    TryBlock["Execute try block"] --> ErrorCheck{"Exception occurred?"}
-    ErrorCheck -- "Yes" --> Catch["Execute matching except block"]
-    ErrorCheck -- "No" --> Else["Execute else block (runs on success)"]
-    Catch --> Finally["Execute finally block (ALWAYS runs)"]
+    TryBlock["1. try: Run risky code"] --> Check{"Exception raised?"}
+    Check -- "Yes" --> Except["2. except: Catch & handle error"]
+    Check -- "No" --> Else["3. else: Runs if NO error"]
+    Except --> Finally["4. finally: ALWAYS executes (cleanup)"]
     Else --> Finally
-    Finally --> Resume["Resume normal program execution"]
+    Finally --> Resume["5. Resume Normal Program"]
 ```
 
-### 3. Essential Syntax & Patterns
-
+### 3. Syntax & Micro Examples
 ```python
-# 1. Errors vs Exceptions
-# - SyntaxError / IndentationError: Parsing errors caught before code runs.
-# - Exceptions (ZeroDivisionError, TypeError, ValueError, KeyError): Runtime errors.
+# 1. Compile Errors vs Runtime Exceptions
+# - SyntaxError / IndentationError: Parsing phase (cannot be caught by try-except)
+# - Exceptions: Runtime phase (ZeroDivisionError, ValueError, TypeError, KeyError)
 
-# 2. Complete try-except-else-finally Suite
-num_input = input("Enter divisor: ")
-
+# 2. Complete Handler Suite
 try:
-    divisor = int(num_input)
-    result = 100 / divisor
+    num = int(input("Divisor: "))
+    result = 10 / num
 except ValueError:
-    print("Invalid input! Please enter a valid integer.")
+    print("Error: Input must be a number!")
 except ZeroDivisionError:
-    print("Cannot divide by zero!")
+    print("Error: Cannot divide by zero!")
 except Exception as err:
-    print(f"Unexpected error: {err}")
+    print(f"Generic error: {err}")
 else:
-    # Runs ONLY if NO exceptions were raised in the try block
-    print(f"Division successful: {result}")
+    print(f"Success! Result: {result}")
 finally:
-    # ALWAYS runs, regardless of whether exceptions were raised or caught
-    # Ideal for closing files, network sockets, or database connections
-    print("Execution complete. Cleaning up resources.")
+    print("Always runs: closing resources / cleanup.")
 
-# 3. Raising Custom Exceptions with 'raise'
+# 3. Triggering Custom Domain Errors with 'raise'
 age = -5
 if age < 0:
     raise ValueError("Age cannot be negative!")
 ```
 
-### 4. Golden Rules for Your Handbook
-* **Specific Before Generic**: Always place specific exception handlers (`ZeroDivisionError`, `ValueError`) before the generic `except Exception` catch-all.
-* **`finally` Always Executes**: The `finally` block runs even if a `return`, `break`, or unhandled exception occurs inside `try` or `except`.
-* **Manual Validation**: Use `raise ValueError("message")` to enforce domain rules in your programs.
+### 4. ⚠️ Traps for Your Notebook
+* **Order of `except` Blocks**: Always place specific exceptions (`ValueError`, `KeyError`) **above** the generic `except Exception:`.
+* **`finally` Execution Guarantee**: The `finally` block runs even if a `return` or `break` is executed inside `try`.
 
 ---
 
-## 📊 Python Master Cheat Sheet
+## 📝 Quick Notebook Revision Matrix
 
-### Data Structures Comparison Matrix
+### The 4 Python Data Structures (Copy this onto a single notebook page)
 
-| Data Structure | Syntax | Mutability | Ordered? | Duplicates? | Element Constraints | Primary Use Case |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **List** | `[1, 2, 3]` | **Mutable** | Yes | Yes | Any type | Ordered sequences, dynamic stacks, queues |
-| **Tuple** | `(1, 2, 3)` | **Immutable** | Yes | Yes | Any type | Read-only constants, coordinate pairs, dict keys |
-| **Set** | `{1, 2, 3}` | **Mutable** | No | **No** | **Hashable only** | Deduplication, fast membership ($O(1)$), math set ops |
-| **Dictionary**| `{"k": "v"}` | **Mutable** | Yes (3.7+) | Keys: **No**, Values: Yes | Keys: **Hashable only** | Key-value records, fast lookups ($O(1)$), JSON |
+| Structure | Literal Syntax | Mutable? | Ordered? | Duplicates? | Element Constraints | Primary Purpose |
+| :--- | :---: | :---: | :---: | :---: | :--- | :--- |
+| **List** | `[1, 2, 3]` | **Yes** | Yes | Yes | Any data type | Dynamic arrays, stacks, ordered data |
+| **Tuple** | `(1, 2, 3)` | **No** | Yes | Yes | Any data type | Read-only constants, coordinate pairs, dict keys |
+| **Set** | `{1, 2, 3}` | **Yes** | No | **No** | **Hashable only** | Deduplication, fast $O(1)$ membership, math set ops |
+| **Dictionary**| `{"k": "v"}` | **Yes** | Yes (3.7+) | Keys: **No** | Keys: **Hashable only** | Key-value records, fast lookups ($O(1)$), JSON |
 
-### Quick Syntax & Memory Hooks
-
-| Topic | Syntax / Pattern | Golden One-Line Memory Hook |
-| :--- | :--- | :--- |
-| **String Slicing** | `s[start:stop:step]` | `[::-1]` reverses; stop index is always excluded. |
-| **Single-item Tuple** | `(1,)` | Parentheses without a comma evaluate to a normal integer. |
-| **Empty Set** | `set()` | `{}` creates an empty dictionary; use `set()` for sets. |
-| **Dict Safe Access** | `d.get(key, default)` | Avoids `KeyError` by returning `None` or a custom fallback. |
-| **Loop Else** | `for ... else:` | `else` runs only if the loop completes without hitting a `break`. |
-| **Floor Division** | `//` | Standard `/` produces a float; `//` discards decimals. |
-| **Clean Resource Exit** | `finally:` | Always runs even if errors or returns occur in `try`. |
-| **Custom Errors** | `raise ValueError("msg")` | Manually triggers an exception when validation fails. |
+### Golden 1-Line Memory Hooks
+1. **String Reversal**: `text[::-1]` reverses any sequence via negative step.
+2. **Single Tuple**: `(1,)` needs a trailing comma; `(1)` is just an integer.
+3. **Empty Set**: `set()` creates an empty set; `{}` creates an empty dictionary.
+4. **Safe Dict Access**: `d.get(k, default)` avoids `KeyError`.
+5. **Loop Else**: `else:` on loops runs only if the loop finishes **without** encountering a `break`.
+6. **Floor Division**: `//` truncates decimals; `/` always produces a float.
+7. **Cleanup Guarantee**: `finally:` is guaranteed to execute, making it ideal for closing files/connections.
+8. **Raise Exceptions**: `raise ValueError("msg")` manually triggers an exception.
