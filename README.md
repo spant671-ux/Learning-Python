@@ -6,6 +6,7 @@ Welcome to my Python learning repository! This repo documents my journey masteri
 
 ## 📚 Table of Contents
 - [📂 Topics Directory](#-topics-directory)
+- [📖 Study Handbook & Notes](#-study-handbook--notes)
 - [🚀 Getting Started](#-getting-started)
 - [🛠️ Tech Stack & Tools](#️-tech-stack--tools)
 - [📝 Progress Tracker](#-progress-tracker)
@@ -29,7 +30,8 @@ Welcome to my Python learning repository! This repo documents my journey masteri
 | 10 | [`05data-structures`](./05data-structures) | [`lists.py`](./05data-structures/lists.py) | Data Structures - Lists | List properties (mutable, ordered, duplicates, heterogeneous), indexing, direct traversal, methods (`append`, `insert`, `extend`, `remove`), filtering, aggregate calculations, maximum element, second greatest, and sorted check with `for...else` |
 | 11 | [`05data-structures`](./05data-structures) | [`tuples.py`](./05data-structures/tuples.py) | Data Structures - Tuples | Tuple characteristics (immutable, ordered, duplicates, heterogeneous), single-element trailing comma rule `(1,)`, immutability principles, iteration, built-in methods (`index`, `count`), packing/unpacking, variable swapping, slicing, and list conversions |
 | 12 | [`05data-structures`](./05data-structures) | [`sets.py`](./05data-structures/sets.py) | Data Structures - Sets | Set properties (unordered, unique/no duplicates, mutable container, hashable elements), empty set quirk `set()`, `hash()`, fast O(1) membership testing, modification (`add`, `remove`, `discard`, `pop`, `clear`), and mathematical set operations (union `|`, intersection `&`, difference `-`, symmetric difference `^`) |
-| 13 | [`06exception-handling`](./06exception-handling) | [`new.py`](./06exception-handling/new.py) | Exception Handling | Errors vs Exceptions, `try`, `except`, `else`, `finally`, manual exception triggering via `raise` |
+| 13 | [`05data-structures`](./05data-structures) | [`dictionary.py`](./05data-structures/dictionary.py) | Data Structures - Dictionaries | Key-Value mappings, key hashability rules, accessing via `[]` vs `.get()`, adding/updating, iteration (`keys`, `values`, `items`), removal (`del`, `pop`, `popitem`, `clear`), word frequency counter, and nested dictionaries |
+| 14 | [`06exception-handling`](./06exception-handling) | [`new.py`](./06exception-handling/new.py) | Exception Handling | Errors vs Exceptions, `try`, `except`, `else`, `finally`, manual exception triggering via `raise` |
 
 ---
 
@@ -70,10 +72,11 @@ python "03iterations/while-loop.py"
 # Functions
 python "04functions/function.py"
 
-# Data Structures - Lists, Tuples & Sets
+# Data Structures - Lists, Tuples, Sets & Dictionaries
 python "05data-structures/lists.py"
 python "05data-structures/tuples.py"
 python "05data-structures/sets.py"
+python "05data-structures/dictionary.py"
 
 # Exception Handling
 python "06exception-handling/new.py"
@@ -103,11 +106,17 @@ python "06exception-handling/new.py"
 - [x] Lists (Properties, Traversal, Built-in Methods, Practice Algorithms)
 - [x] Tuples (Immutability, Single-element Trailing Comma, Packing/Unpacking, `index`/`count`)
 - [x] Sets (Unique Elements, Hashing, `add`/`remove`/`discard`, Set Operations: `|`, `&`, `-`, `^`)
-- [ ] Dictionaries (Hash maps, Key-Value Pairs, Methods)
+- [x] Dictionaries (Key-Value Pairs, Hashability, Methods: `.get()`, `.items()`, Nested Dicts, Frequency Counter)
 - [ ] List Comprehension & Advanced Slicing
 - [x] Functions (`def`, parameters, positional & keyword args, default values, `return`)
 - [x] Exception Handling (`try`, `except`, `else`, `finally`, `raise`)
 - [ ] Object-Oriented Programming (Classes, Objects, Inheritance, Polymorphism)
+
+---
+
+## 📖 Study Handbook & Notes
+
+- **[NOTES.md](./NOTES.md)**: Curated, balanced conceptual study notes across all modules (Basics, Control Flow, Iterations, Functions, Data Structures, Exception Handling) with hand-drawable visual Mermaid architecture diagrams, code patterns, and golden interview rules.
 
 ---
 
