@@ -1,31 +1,31 @@
-# 📓 Python Study Handbook (Notebook Edition)
+# 📘 Python Study Handbook
 
-A structured, handwriting-friendly reference guide designed specifically for copying into an actual paper notebook. Every section includes **Concept Summaries**, **15-Second Sketch Diagrams**, **Syntax Formulas**, **Micro Examples**, and **Exam/Interview Traps**.
+A structured, balanced reference guide covering core Python fundamentals, control flow, functions, data structures, and exception handling. Each section includes **Key Concepts**, **Visual Architecture Diagrams**, **Syntax Formulas & Examples**, and **Common Traps & Gotchas**.
 
 ---
 
 ## 📑 Table of Contents
-- [Page 1: Python Basics & Strings (`01basics`)](#page-1-python-basics--strings-01basics)
-- [Page 2: Operators & Expressions (`01basics`)](#page-2-operators--expressions-01basics)
-- [Page 3: Control Flow & Conditionals (`02control-flow`)](#page-3-control-flow--conditionals-02control-flow)
-- [Page 4: Loops & Iterations (`03iterations`)](#page-4-loops--iterations-03iterations)
-- [Page 5: Functions & Scope (`04functions`)](#page-5-functions--scope-04functions)
-- [Page 6: Lists — Mutable Sequences (`05data-structures`)](#page-6-lists--mutable-sequences-05data-structures)
-- [Page 7: Tuples — Immutable Sequences (`05data-structures`)](#page-7-tuples--immutable-sequences-05data-structures)
-- [Page 8: Sets — Unique Unordered Collections (`05data-structures`)](#page-8-sets--unique-unordered-collections-05data-structures)
-- [Page 9: Dictionaries — Key-Value Hashmaps (`05data-structures`)](#page-9-dictionaries--key-value-hashmaps-05data-structures)
-- [Page 10: Exception Handling (`06exception-handling`)](#page-10-exception-handling-06exception-handling)
-- [📝 Quick Notebook Revision Matrix](#-quick-notebook-revision-matrix)
+- [Module 1: Python Basics & Strings (`01basics`)](#module-1-python-basics--strings-01basics)
+- [Module 2: Operators & Expressions (`01basics`)](#module-2-operators--expressions-01basics)
+- [Module 3: Control Flow & Conditionals (`02control-flow`)](#module-3-control-flow--conditionals-02control-flow)
+- [Module 4: Loops & Iterations (`03iterations`)](#module-4-loops--iterations-03iterations)
+- [Module 5: Functions & Scope (`04functions`)](#module-5-functions--scope-04functions)
+- [Module 6: Lists — Mutable Sequences (`05data-structures`)](#module-6-lists--mutable-sequences-05data-structures)
+- [Module 7: Tuples — Immutable Sequences (`05data-structures`)](#module-7-tuples--immutable-sequences-05data-structures)
+- [Module 8: Sets — Unique Unordered Collections (`05data-structures`)](#module-8-sets--unique-unordered-collections-05data-structures)
+- [Module 9: Dictionaries — Key-Value Hashmaps (`05data-structures`)](#module-9-dictionaries--key-value-hashmaps-05data-structures)
+- [Module 10: Exception Handling (`06exception-handling`)](#module-10-exception-handling-06exception-handling)
+- [📊 Quick Revision Matrix](#-quick-revision-matrix)
 
 ---
 
-## Page 1: Python Basics & Strings (`01basics`)
+## Module 1: Python Basics & Strings (`01basics`)
 
-### 1. Key Concept
-* **Interpreted & Dynamically Typed**: Variables do not need type declarations; types are determined at runtime.
-* **Basic Data Types**: `int` (42), `float` (3.14), `str` ("hello"), `bool` (`True`/`False`), `NoneType` (`None`).
+### 1. Key Concepts
+* **Interpreted & Dynamically Typed**: Variables do not need type declarations; types are bound at runtime based on assigned values.
+* **Primitive Data Types**: `int` (42), `float` (3.14), `str` ("hello"), `bool` (`True`/`False`), `NoneType` (`None`).
 
-### 2. Notebook Diagram: Python Execution Pipeline
+### 2. Architecture Diagram: Python Execution Pipeline
 ```mermaid
 graph LR
     Source[".py Source Code"] --> Compiler["CPython Compiler"]
@@ -45,11 +45,11 @@ graph LR
   * `stop`  = exclusive (default: `len`)
   * `step`  = step size / direction (default: `1`)
 
-### 4. Micro Examples for Notebook
+### 4. Syntax & Examples
 ```python
 s = "PYTHON"
-print(s[0:4])    # 'PYTH'  (stops before index 4)
-print(s[::-1])   # 'NOHTYP' (Reverse string formula)
+print(s[0:4])    # 'PYTH' (stops before index 4)
+print(s[::-1])   # 'NOHTYP' (Reverse string trick)
 print(ord("A"))  # 65 (Character to Unicode)
 print(chr(65))   # 'A' (Unicode to Character)
 
@@ -58,16 +58,16 @@ age = int(input("Enter age: "))
 print(f"Next year: {age + 1}")
 ```
 
-### 5. ⚠️ Traps for Your Notebook
-* **Strings are Immutable**: You cannot do `s[0] = 'J'`. Slicing always returns a new string.
-* **`input()` Always Returns `str`**: Forgetting `int()` or `float()` causes string concatenation instead of math (`"5" + "5"` = `"55"`).
+### 5. ⚠️ Common Traps & Gotchas
+* **Strings are Immutable**: `s[0] = 'J'` raises `TypeError`. Slicing always returns a new string.
+* **`input()` Always Returns `str`**: Forgetting `int()` or `float()` causes string concatenation instead of arithmetic (`"5" + "5"` = `"55"`).
 
 ---
 
-## Page 2: Operators & Expressions (`01basics`)
+## Module 2: Operators & Expressions (`01basics`)
 
-### 1. Key Concept
-Operators perform operations on variables and values. Python supports arithmetic, relational, logical, and assignment operators.
+### 1. Key Concepts
+Operators perform computations on variables and values. Python supports arithmetic, relational, logical, and assignment operations.
 
 ### 2. Operator Reference Table
 | Category | Operator | Example | Result / Meaning |
@@ -79,18 +79,18 @@ Operators perform operations on variables and values. Python supports arithmetic
 | **Comparison** | `==`, `!=` | `5 != 3` | `True` (Checks equality/inequality) |
 | **Logical** | `and`, `or`, `not` | `x and y` | Short-circuit boolean evaluation |
 
-### 3. ⚠️ Traps for Your Notebook
+### 3. ⚠️ Common Traps & Gotchas
 * `/` vs `//`: `10 / 2` gives `5.0` (float), while `10 // 2` gives `5` (int).
 * Precedence: `**` (highest) $\rightarrow$ `*`, `/`, `//`, `%` $\rightarrow$ `+`, `-`. Use parentheses `()` to enforce order.
 
 ---
 
-## Page 3: Control Flow & Conditionals (`02control-flow`)
+## Module 3: Control Flow & Conditionals (`02control-flow`)
 
-### 1. Key Concept
+### 1. Key Concepts
 Directs program execution based on condition tests. Python uses **4 spaces indentation** to define blocks instead of `{}`.
 
-### 2. Notebook Diagram: Decision Ladder
+### 2. Decision Tree Diagram
 ```mermaid
 graph TD
     Start["Condition 1 (if)"] -->|True| Block1["Execute Block 1"]
@@ -102,7 +102,7 @@ graph TD
     ElseBlock --> Exit
 ```
 
-### 3. Syntax & Micro Examples
+### 3. Syntax & Examples
 ```python
 # 1. Standard if-elif-else Ladder
 score = 82
@@ -124,19 +124,19 @@ if not cart:
     print("Cart is empty!")  # Clean, Pythonic falsy check
 ```
 
-### 4. ⚠️ Traps for Your Notebook
+### 4. ⚠️ Common Traps & Gotchas
 * **First Match Wins**: Once any `if` or `elif` evaluates to `True`, the remaining ladder is completely skipped.
 * **Indentation Rules**: Never mix tabs and spaces. Use 4 spaces consistently.
 
 ---
 
-## Page 4: Loops & Iterations (`03iterations`)
+## Module 4: Loops & Iterations (`03iterations`)
 
-### 1. Key Concept
+### 1. Key Concepts
 * **`for` loop**: Definite loop used when the number of iterations or the collection is known.
 * **`while` loop**: Indefinite loop that repeats as long as a condition evaluates to `True`.
 
-### 2. Notebook Diagram: The `for...else` Flow
+### 2. The `for...else` Execution Diagram
 ```mermaid
 graph TD
     Start["Loop Iteration"] --> Check{"More items to loop?"}
@@ -149,7 +149,7 @@ graph TD
     Exit --> Done
 ```
 
-### 3. Syntax & Micro Examples
+### 3. Syntax & Examples
 
 ```python
 # 1. range(start, stop, step) -> stop is EXCLUSIVE
@@ -173,24 +173,24 @@ else:
 n = 1234
 rev = 0
 while n > 0:
-    digit = n % 10        # 1. Extract last digit
+    digit = n % 10         # 1. Extract last digit
     rev = rev * 10 + digit # 2. Shift left & append
-    n = n // 10           # 3. Discard last digit
+    n = n // 10            # 3. Discard last digit
 print(rev)  # 4321
 ```
 
-### 4. ⚠️ Traps for Your Notebook
+### 4. ⚠️ Common Traps & Gotchas
 * `range(1, 5)` yields `1, 2, 3, 4` — it stops **before** `5`.
 * Forgetting `n //= 10` or `i += 1` inside a `while` loop creates an **infinite loop**.
 
 ---
 
-## Page 5: Functions & Scope (`04functions`)
+## Module 5: Functions & Scope (`04functions`)
 
-### 1. Key Concept
+### 1. Key Concepts
 Functions are reusable blocks of code defined by `def`. They help structure programs modularly and eliminate redundant code (DRY principle).
 
-### 2. Notebook Diagram: Function Call Pipeline
+### 2. Function Call Pipeline Diagram
 ```mermaid
 graph LR
     Call["Call: calc_tax(100, 0.18)"] --> Params["Bind Arguments to Parameters"]
@@ -202,7 +202,7 @@ graph LR
     NoneVal --> Caller
 ```
 
-### 3. Syntax & Micro Examples
+### 3. Syntax & Examples
 ```python
 # 1. Basic Function & Return
 def add(a, b):
@@ -229,19 +229,19 @@ res = greet()
 print(res)  # Output: None
 ```
 
-### 4. ⚠️ Traps for Your Notebook
+### 4. ⚠️ Common Traps & Gotchas
 * **Default Argument Order**: Default parameters must **always follow** positional parameters.
   * `def f(a=1, b):` ❌ `SyntaxError: non-default parameter follows default parameter`
   * `def f(b, a=1):` ✅ Correct.
 
 ---
 
-## Page 6: Lists — Mutable Sequences (`05data-structures`)
+## Module 6: Lists — Mutable Sequences (`05data-structures`)
 
-### 1. Key Concept
+### 1. Key Concepts
 A **List** (`[]`) is an ordered, mutable sequence that allows duplicate elements of heterogeneous data types.
 
-### 2. Notebook Memory Box
+### 2. Overview Box
 ```text
 List = [ Item 0, Item 1, Item 2, ... ]
 Characteristics: [✔] Mutable   [✔] Ordered   [✔] Duplicates   [✔] Any Type
@@ -257,7 +257,7 @@ Characteristics: [✔] Mutable   [✔] Ordered   [✔] Duplicates   [✔] Any Ty
 | `l.pop(i)` | Removes and returns item at index `i` | $O(1)$ for end, $O(n)$ for middle |
 | `l.clear()` | Empties the list (`[]`) | $O(1)$ |
 
-### 4. Micro Examples for Notebook
+### 4. Syntax & Examples
 ```python
 nums = [10, 20, 30]
 nums[0] = 99             # In-place mutation: [99, 20, 30]
@@ -272,12 +272,12 @@ for val in nums:
 
 ---
 
-## Page 7: Tuples — Immutable Sequences (`05data-structures`)
+## Module 7: Tuples — Immutable Sequences (`05data-structures`)
 
-### 1. Key Concept
+### 1. Key Concepts
 A **Tuple** (`()`) is an ordered, immutable sequence. Once created, its elements cannot be changed, added, or deleted.
 
-### 2. Notebook Memory Box
+### 2. Overview Box
 ```text
 Tuple = ( Item 0, Item 1, Item 2, ... )
 Characteristics: [❌] Immutable   [✔] Ordered   [✔] Duplicates   [✔] Hashable
@@ -288,7 +288,7 @@ Characteristics: [❌] Immutable   [✔] Ordered   [✔] Duplicates   [✔] Hash
 2. **Performance**: Allocates faster and consumes less memory than lists.
 3. **Dictionary Keys**: Can be used as dict keys and set items (because they are hashable).
 
-### 4. Micro Examples for Notebook
+### 4. Syntax & Examples
 ```python
 # The Single-Item Comma Quirk:
 not_a_tuple = (5)   # Type: int (evaluated as math parentheses!)
@@ -299,19 +299,19 @@ t = (1, 2, 2, 3)
 print(t.count(2))   # 2 (occurrences of 2)
 print(t.index(3))   # 3 (first index of 3)
 
-# Tuple Unpacking & Pythonic Swap:
+# Tuple Unpacking & Variable Swap:
 x, y = 10, 20
 x, y = y, x         # Clean swap without temporary variable!
 ```
 
 ---
 
-## Page 8: Sets — Unique Unordered Collections (`05data-structures`)
+## Module 8: Sets — Unique Unordered Collections (`05data-structures`)
 
-### 1. Key Concept
+### 1. Key Concepts
 A **Set** (`{}`) is an unordered collection of **unique, hashable elements**. Sets automatically eliminate duplicate entries.
 
-### 2. Notebook Memory Box
+### 2. Overview Box
 ```text
 Set = { Element 1, Element 2, Element 3, ... }
 Characteristics: [✔] Mutable Container   [❌] Unordered   [❌] No Duplicates   [✔] Hashable Items Only
@@ -325,7 +325,7 @@ Characteristics: [✔] Mutable Container   [❌] Unordered   [❌] No Duplicates
 | **Difference** | `A - B` | `A.difference(B)` | Elements in A but not in B |
 | **Symmetric Diff**| `A ^ B` | `A.symmetric_difference(B)` | Elements in either A or B, but not both |
 
-### 4. Micro Examples for Notebook
+### 4. Syntax & Examples
 ```python
 # 1. Automatic Deduplication
 s = {1, 2, 2, 3, 3, 3}
@@ -347,18 +347,18 @@ if 3 in s:
 
 ---
 
-## Page 9: Dictionaries — Key-Value Hashmaps (`05data-structures`)
+## Module 9: Dictionaries — Key-Value Hashmaps (`05data-structures`)
 
-### 1. Key Concept
+### 1. Key Concepts
 A **Dictionary** (`{key: value}`) stores associative key-value mappings. It uses hash tables under the hood, enabling instant $O(1)$ lookups.
 
-### 2. Notebook Memory Box
+### 2. Overview Box
 ```text
 Dict = { Key1: Val1, Key2: Val2, ... }
 Characteristics: [✔] Mutable   [✔] Ordered (3.7+)   [❌] Unique Keys   [✔] Hashable Keys Only
 ```
 
-### 3. Syntax & Micro Examples
+### 3. Syntax & Examples
 ```python
 # 1. Key Rule: Keys must be immutable (str, int, tuple). Lists CANNOT be keys!
 user = {"name": "Sans", "role": "Dev"}
@@ -375,7 +375,7 @@ for v in user.values():      # Values
 for k, v in user.items():    # Both (Tuple Unpacking)
     print(f"{k} -> {v}")
 
-# 4. Word Frequency Counter (Classic Interview Pattern):
+# 4. Word Frequency Counter:
 words = ["apple", "banana", "apple"]
 freq = {}
 for w in words:
@@ -383,18 +383,18 @@ for w in words:
 print(freq)  # {'apple': 2, 'banana': 1}
 ```
 
-### 4. ⚠️ Traps for Your Notebook
+### 4. ⚠️ Common Traps & Gotchas
 * `del d[k]` and `d.pop(k)` raise `KeyError` if `k` is missing. Use `d.pop(k, None)` or `d.get()` to avoid crashes.
 * Duplicate keys in a literal overwrite previous values: `{"a": 1, "a": 2}` becomes `{"a": 2}`.
 
 ---
 
-## Page 10: Exception Handling (`06exception-handling`)
+## Module 10: Exception Handling (`06exception-handling`)
 
-### 1. Key Concept
+### 1. Key Concepts
 Exception handling intercepts runtime errors to prevent program crashes, allowing graceful error logging, user notifications, and resource cleanup.
 
-### 2. Notebook Diagram: The `try-except-else-finally` Lifecycle
+### 2. Lifecycle Diagram: `try-except-else-finally`
 ```mermaid
 graph TD
     TryBlock["1. try: Run risky code"] --> Check{"Exception raised?"}
@@ -405,7 +405,7 @@ graph TD
     Finally --> Resume["5. Resume Normal Program"]
 ```
 
-### 3. Syntax & Micro Examples
+### 3. Syntax & Examples
 ```python
 # 1. Compile Errors vs Runtime Exceptions
 # - SyntaxError / IndentationError: Parsing phase (cannot be caught by try-except)
@@ -432,15 +432,15 @@ if age < 0:
     raise ValueError("Age cannot be negative!")
 ```
 
-### 4. ⚠️ Traps for Your Notebook
+### 4. ⚠️ Common Traps & Gotchas
 * **Order of `except` Blocks**: Always place specific exceptions (`ValueError`, `KeyError`) **above** the generic `except Exception:`.
 * **`finally` Execution Guarantee**: The `finally` block runs even if a `return` or `break` is executed inside `try`.
 
 ---
 
-## 📝 Quick Notebook Revision Matrix
+## 📊 Quick Revision Matrix
 
-### The 4 Python Data Structures (Copy this onto a single notebook page)
+### The 4 Python Data Structures
 
 | Structure | Literal Syntax | Mutable? | Ordered? | Duplicates? | Element Constraints | Primary Purpose |
 | :--- | :---: | :---: | :---: | :---: | :--- | :--- |
